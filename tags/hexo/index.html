@@ -6,21 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://maitestarossa.github.io">
-  <title>Android操作XML、JSON文件 | Mai&#39;s Blog</title>
+  <title>Tag: hexo | Mai&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="读取解析XML文件 读取XML1234567891011DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();DocumentBuilder builder = dbf.newDocumentBuilder();//org.3c.dom包下的DocumentDocument d = builder.parse(getAs">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Android操作XML、JSON文件">
-<meta property="og:url" content="https://maitestarossa.github.io/2016/12/08/AndroidOpJSONXML/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Mai&#39;s Blog">
+<meta property="og:url" content="https://maitestarossa.github.io/tags/hexo/index.html">
 <meta property="og:site_name" content="Mai&#39;s Blog">
-<meta property="og:description" content="读取解析XML文件 读取XML1234567891011DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();DocumentBuilder builder = dbf.newDocumentBuilder();//org.3c.dom包下的DocumentDocument d = builder.parse(getAs">
-<meta property="og:image" content="https://maitestarossa.github.io/2016/12/08/AndroidOpJSONXML/ReadXMLJSON.png">
-<meta property="og:image" content="https://maitestarossa.github.io/2016/12/08/AndroidOpJSONXML/ReadXMLJSON2.png">
-<meta property="og:updated_time" content="2017-05-16T22:45:41.605Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android操作XML、JSON文件">
-<meta name="twitter:description" content="读取解析XML文件 读取XML1234567891011DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();DocumentBuilder builder = dbf.newDocumentBuilder();//org.3c.dom包下的DocumentDocument d = builder.parse(getAs">
-<meta name="twitter:image" content="https://maitestarossa.github.io/2016/12/08/AndroidOpJSONXML/ReadXMLJSON.png">
+<meta name="twitter:title" content="Mai&#39;s Blog">
   
     <link rel="alternative" href="/atom.xml" title="Mai&#39;s Blog" type="application/atom+xml">
   
@@ -150,175 +143,64 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-AndroidOpJSONXML" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      Android操作XML、JSON文件
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/05/17/updatehexo2017/" class="archive-article-date">
+  	<time datetime="2017-05-17T04:53:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-17</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/05/17/updatehexo2017/">半年多没使用hexo，在github pages更新、重新布置遇到的问题</a>
     </h1>
   
 
-        
-        <a href="/2016/12/08/AndroidOpJSONXML/" class="archive-article-date">
-  	<time datetime="2016-12-08T13:05:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="读取解析XML文件"><a href="#读取解析XML文件" class="headerlink" title="读取解析XML文件"></a>读取解析XML文件</h2><p><img src="/2016/12/08/AndroidOpJSONXML/ReadXMLJSON.png" alt=""></p>
-<h3 id="读取XML"><a href="#读取XML" class="headerlink" title="读取XML"></a>读取XML</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();</div><div class="line">DocumentBuilder builder = dbf.newDocumentBuilder();</div><div class="line"><span class="comment">//org.3c.dom包下的Document</span></div><div class="line">Document d = builder.parse(getAsserts().open(<span class="string">"test.xml"</span>));</div><div class="line">Element e = d.getDocumentElement();</div><div class="line">NoteList list = e.getElementsByTagName(<span class="string">"lan"</span>);</div><div class="line">list.getLength();</div><div class="line">Element lan = (Element)list.item(<span class="number">0</span>...<span class="number">1</span>);</div><div class="line">lan.getAttribute(<span class="string">"id"</span>);</div><div class="line">lan.getElementByTagName(<span class="string">"name"</span>).item(<span class="number">0</span>).getTextContent();</div><div class="line">lan.getElementByTagName(<span class="string">"ide"</span>).item(<span class="number">0</span>).getTextContent();</div></pre></td></tr></table></figure>
-<a id="more"></a>
-<h3 id="生成输出XML"><a href="#生成输出XML" class="headerlink" title="生成输出XML"></a>生成输出XML</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();</div><div class="line">DocumentBuilder builder = dbf.newDocumentBuilder();</div><div class="line">Document newxml = builder.newDocument();</div><div class="line">Element lans = newxml.createElement(<span class="string">"Languages"</span>);</div><div class="line">lans.setAttribute(<span class="string">"cat"</span>,<span class="string">"it"</span>);</div><div class="line"></div><div class="line">Element lan1 = newxml.createElement(<span class="string">"lan"</span>);</div><div class="line">lan1.setAttribute(<span class="string">"id"</span>,<span class="string">"1"</span>);</div><div class="line">Element name1 = newxml.createElement(<span class="string">"name"</span>);</div><div class="line">lan1.setTextContent(<span class="string">"Java"</span>);</div><div class="line">Element ide1 = newxml.createElement(<span class="string">"ide"</span>);</div><div class="line">ide1.setTextContent(<span class="string">"Eclipse"</span>);</div><div class="line">lan1.appendChild(name1);</div><div class="line">lan1.appendChild(ide1);</div><div class="line">lans.appendChild(lan1);</div><div class="line"></div><div class="line"><span class="comment">//newxml.adoptNode(lans);错误</span></div><div class="line">newxml.appendChild(lans);</div><div class="line"></div><div class="line">TransformerFactory tf = TransformerFactory.newInstance();</div><div class="line">Transformer transformer = tf.newTransformer();</div><div class="line">transformer.setOutputProperty(<span class="string">"encoding"</span>,<span class="string">"uft-8"</span>);</div><div class="line">StringWriter sw = <span class="keyword">new</span> StringWriter();</div><div class="line">transformer.transform(<span class="keyword">new</span> DOMSource(newxml),<span class="keyword">new</span> StreamResult(sw));</div><div class="line">sw.toString();</div></pre></td></tr></table></figure>
-<h2 id="操作JSON数据"><a href="#操作JSON数据" class="headerlink" title="操作JSON数据"></a>操作JSON数据</h2><p><img src="/2016/12/08/AndroidOpJSONXML/ReadXMLJSON2.png" alt=""></p>
-<h3 id="读取JSON"><a href="#读取JSON" class="headerlink" title="读取JSON"></a>读取JSON</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">InputStreamReader isr = <span class="keyword">new</span> InputStreamReader(getAssets.open(<span class="string">"test.json"</span>),<span class="string">"UTF-8"</span>);</div><div class="line">BufferedReader br = <span class="keyword">new</span> BufferedReader(isr);</div><div class="line">String line;</div><div class="line">StringBuilder sb = <span class="keyword">new</span> StringBuilder();</div><div class="line"><span class="keyword">while</span> ((line = br.readLine()) != <span class="keyword">null</span>) &#123;</div><div class="line">    sb.append(line);</div><div class="line">&#125;</div><div class="line">br.close();</div><div class="line">isr.close();</div><div class="line"></div><div class="line">JSONObject root = <span class="keyword">new</span> JSONObject(sb);</div><div class="line">root.getString(<span class="string">"cat"</span>);</div><div class="line">JSONArray array = root.getJSONArray(<span class="string">"languages"</span>);</div><div class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; array.length();i++) &#123;</div><div class="line">    JSONObject lan = array.getJSONObject(i);</div><div class="line">    lan.getInt(<span class="string">"id"</span>);</div><div class="line">    lan.getString(<span class="string">"name"</span>);</div><div class="line">    lan.getString(<span class="string">"ide"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="创建JSON数据"><a href="#创建JSON数据" class="headerlink" title="创建JSON数据"></a>创建JSON数据</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">JSONObject root = <span class="keyword">new</span> JSONObject();</div><div class="line">root.put(<span class="string">"cat"</span>,<span class="string">"it"</span>);</div><div class="line"></div><div class="line">JSONObject lan1 = <span class="keyword">new</span> JSONObject();</div><div class="line">lan1.put(<span class="string">"id"</span>,<span class="number">1</span>);</div><div class="line">lan1.put(<span class="string">"ide"</span>,<span class="string">"eclipse"</span>);</div><div class="line">lan1.put(<span class="string">"name"</span>,<span class="string">"java"</span>);</div><div class="line"></div><div class="line">JSONArray array = <span class="keyword">new</span> JSONArray();</div><div class="line">array.put(lan1);</div><div class="line"></div><div class="line">root.put(<span class="string">"languages"</span>,array);</div></pre></td></tr></table></figure>
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">atom</a>
+        		</li>
+      		
+		</ul>
+	</div>
 
-      
+          
 
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/favicon.png">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
         </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://maitestarossa.github.io/2016/12/08/AndroidOpJSONXML/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2017/05/17/updatehexo2017/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          半年多没使用hexo，在github pages更新、重新布置遇到的问题
-        
-      </div>
-    </a>
   
   
-    <a href="/2016/10/17/sublime3HowToUseBrackethighlighter/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Sublime Text3中使用Brackethighlighter，配置颜色</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-    <section id="comments">
-      <div id="disqus_thread"></div>
-        <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'maimaimaimai'; // required: replace example with your forum shortname
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-      </script>
-      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </section>
-  
+    
 
 
           </div>
@@ -341,9 +223,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",

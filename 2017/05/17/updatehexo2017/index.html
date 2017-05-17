@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="https://maitestarossa.github.io">
   <title>半年多没使用hexo，更新、重新部署遇到的问题（基于github pages） | Mai&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="刚上手hexo一段时间就忘记用了，半年没使用现在想重新捡起来用又因为种种原因需要重新部署。 目前只记得hexo g 、hexo d、 hexo s这些基本命令，幸亏记在了evernote上，否则全忘光了，学习成本感觉不低，重新上手浪费了起码2,3小时。 现在谈谈自己在重新上手时遇到的问题。">
+  <meta name="description" content="刚上手hexo一段时间就忘记用了，半年没使用现在想重新捡起来用又因为种种原因需要重新部署。 目前只记得hexo g 、hexo d、 hexo s这些基本命令，幸亏记在了evernote上，否则全忘光了，学习成本感觉不低，重新上手浪费了起码2,3小时。 现在谈谈自己在重新上手时遇到的问题。 理论上和我一样版本的话照做就行：hexo: 3.3.5 hexo-cli: 1.0.2 os: Window">
 <meta name="keywords" content="hexo,atom">
 <meta property="og:type" content="article">
 <meta property="og:title" content="半年多没使用hexo，更新、重新部署遇到的问题（基于github pages）">
 <meta property="og:url" content="https://maitestarossa.github.io/2017/05/17/updatehexo2017/index.html">
 <meta property="og:site_name" content="Mai&#39;s Blog">
-<meta property="og:description" content="刚上手hexo一段时间就忘记用了，半年没使用现在想重新捡起来用又因为种种原因需要重新部署。 目前只记得hexo g 、hexo d、 hexo s这些基本命令，幸亏记在了evernote上，否则全忘光了，学习成本感觉不低，重新上手浪费了起码2,3小时。 现在谈谈自己在重新上手时遇到的问题。">
-<meta property="og:updated_time" content="2017-05-17T09:52:09.462Z">
+<meta property="og:description" content="刚上手hexo一段时间就忘记用了，半年没使用现在想重新捡起来用又因为种种原因需要重新部署。 目前只记得hexo g 、hexo d、 hexo s这些基本命令，幸亏记在了evernote上，否则全忘光了，学习成本感觉不低，重新上手浪费了起码2,3小时。 现在谈谈自己在重新上手时遇到的问题。 理论上和我一样版本的话照做就行：hexo: 3.3.5 hexo-cli: 1.0.2 os: Window">
+<meta property="og:updated_time" content="2017-05-17T10:02:05.031Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="半年多没使用hexo，更新、重新部署遇到的问题（基于github pages）">
-<meta name="twitter:description" content="刚上手hexo一段时间就忘记用了，半年没使用现在想重新捡起来用又因为种种原因需要重新部署。 目前只记得hexo g 、hexo d、 hexo s这些基本命令，幸亏记在了evernote上，否则全忘光了，学习成本感觉不低，重新上手浪费了起码2,3小时。 现在谈谈自己在重新上手时遇到的问题。">
+<meta name="twitter:description" content="刚上手hexo一段时间就忘记用了，半年没使用现在想重新捡起来用又因为种种原因需要重新部署。 目前只记得hexo g 、hexo d、 hexo s这些基本命令，幸亏记在了evernote上，否则全忘光了，学习成本感觉不低，重新上手浪费了起码2,3小时。 现在谈谈自己在重新上手时遇到的问题。 理论上和我一样版本的话照做就行：hexo: 3.3.5 hexo-cli: 1.0.2 os: Window">
   
     <link rel="alternative" href="/atom.xml" title="Mai&#39;s Blog" type="application/atom+xml">
   
@@ -170,7 +170,10 @@
       
         <p>刚上手hexo一段时间就忘记用了，半年没使用现在想重新捡起来用又因为种种原因需要重新部署。</p>
 <p>目前只记得<code>hexo g</code> 、<code>hexo d</code>、 <code>hexo s</code>这些基本命令，幸亏记在了evernote上，否则全忘光了，学习成本感觉不低，重新上手浪费了起码2,3小时。</p>
-<p>现在谈谈自己在重新上手时遇到的问题。<br><a id="more"></a></p>
+<p>现在谈谈自己在重新上手时遇到的问题。</p>
+<p>理论上和我一样版本的话照做就行：<br><code>hexo: 3.3.5
+hexo-cli: 1.0.2
+os: Windows_NT 10.0.15063 win32 x64</code><br>，<code>hexo-theme-yilia</code>版本 Apr 28, 2017<br><a id="more"></a></p>
 <h1 id="重新部署"><a href="#重新部署" class="headerlink" title="重新部署"></a>重新部署</h1><p>半年没用发现powershell下输入<code>hexo</code>都没效果了，算了，反正准备从头梳理一遍。</p>
 <p>前面的步骤就不多说了，git环境、npm环境随便搜都能找到中文资料。</p>
 <p>windows下还是用git bash方便，本来准备从头到尾都用powershell，最后发现<code>hexo d</code>的时候，部署到github pages因为是git，在powershell下最后输入密钥的步骤无法认证，只有用git bash才会弹出输入密钥的框，具体什么原因懒得研究了，也不知道是不是记忆混乱了，反正用git bash就不会出错。</p>
@@ -207,8 +210,12 @@
 <li>复制路径粘贴到config里</li>
 </ul>
 <p>（更新下和主题有关的配置问题，用了目前最新版yilia后，点开关于我，出错了，不过有提示缺失模块，按照步骤来就行了）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">缺失模块。</div><div class="line">1、请确保node版本大于6.2</div><div class="line">2、在博客根目录（注意不是yilia根目录）执行以下命令：</div><div class="line">npm i hexo-generator-json-content --save</div><div class="line"></div><div class="line">3、在根目录_config.yml里添加配置：</div><div class="line"></div><div class="line"> jsonContent:</div><div class="line">   meta: false</div><div class="line">   pages: false</div><div class="line">   posts:</div><div class="line">     title: true</div><div class="line">     date: true</div><div class="line">     path: true</div><div class="line">     text: false</div><div class="line">     raw: false</div><div class="line">     content: false</div><div class="line">     slug: false</div><div class="line">     updated: false</div><div class="line">     comments: false</div><div class="line">     link: false</div><div class="line">     permalink: false</div><div class="line">     excerpt: false</div><div class="line">     categories: false</div><div class="line">     tags: true</div></pre></td></tr></table></figure>
-<p>这里我直接从第二步开始，只做了2,3步，<code>hexo g</code>的时候提示<code>hexo-generator-json-content</code>插件载入失败，不过最后部署到github pages上关于我的部分正常了。</p>
+<p>缺失模块。</p>
+<p><del>1、请确保node版本大于6.2</del></p>
+<p><del>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br>npm i hexo-generator-json-content –save</del></p>
+<p>3、在根目录_config.yml里添加配置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">jsonContent:</div><div class="line">  meta: false</div><div class="line">  pages: false</div><div class="line">  posts:</div><div class="line">    title: true</div><div class="line">    date: true</div><div class="line">    path: true</div><div class="line">    text: false</div><div class="line">    raw: false</div><div class="line">    content: false</div><div class="line">    slug: false</div><div class="line">    updated: false</div><div class="line">    comments: false</div><div class="line">    link: false</div><div class="line">    permalink: false</div><div class="line">    excerpt: false</div><div class="line">    categories: false</div><div class="line">    tags: true</div></pre></td></tr></table></figure></p>
+<p>经过测试，这里只需要做第三步，在config最后添加上面这段</p>
+<p>如果按照第二步开始做的话，<code>hexo g</code>的时候提示<code>hexo-generator-json-content</code>插件载入失败，不过不影响最后结果，已经装上的话就<code>npm uninstall hexo-generator-json-content</code></p>
 <h3 id="themes-yilia-config-yml"><a href="#themes-yilia-config-yml" class="headerlink" title="\themes\yilia\_config.yml"></a><code>\themes\yilia\_config.yml</code></h3><p>对比去年的config，感觉增加了不少行，但基本没太多区别，增加了一个打赏功能，而且是中文注释，没什么难度。</p>
 <p>主要是评论系统，之前基本都是用多说，现在多说倒闭了，肯定要换，具体参考下文评论系统部分</p>
 <h2 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h2><ul>
@@ -542,7 +549,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">啊~</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">评论使用disqus，翻墙后才会显示（目测改hosts无反应）</div>
   	  	
     	</section>
     

@@ -15,7 +15,7 @@
 <meta property="og:url" content="https://maitestarossa.github.io/2017/05/17/updatehexo2017/index.html">
 <meta property="og:site_name" content="Mai&#39;s Blog">
 <meta property="og:description" content="刚上手hexo一段时间就忘记用了，半年没使用现在想重新捡起来用又因为种种原因需要重新部署。 目前只记得hexo g 、hexo d、 hexo s这些基本命令，幸亏记在了evernote上，否则全忘光了，学习成本感觉不低，重新上手浪费了起码2,3小时。 现在谈谈自己在重新上手时遇到的问题。 理论上如果你目前更新的版本和我一样的话照做就行：nodejs v6，hexo: 3.3.5 hexo-cli">
-<meta property="og:updated_time" content="2017-05-17T10:34:50.749Z">
+<meta property="og:updated_time" content="2017-05-17T10:45:30.760Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="半年多没使用hexo，更新、重新部署遇到的问题（基于github pages）">
 <meta name="twitter:description" content="刚上手hexo一段时间就忘记用了，半年没使用现在想重新捡起来用又因为种种原因需要重新部署。 目前只记得hexo g 、hexo d、 hexo s这些基本命令，幸亏记在了evernote上，否则全忘光了，学习成本感觉不低，重新上手浪费了起码2,3小时。 现在谈谈自己在重新上手时遇到的问题。 理论上如果你目前更新的版本和我一样的话照做就行：nodejs v6，hexo: 3.3.5 hexo-cli">
@@ -179,7 +179,7 @@ os: Windows_NT 10.0.15063 win32 x64</code><br>，<code>hexo-theme-yilia</code>�
 <h2 id="nodejs版本问题（yilia主题相关）"><a href="#nodejs版本问题（yilia主题相关）" class="headerlink" title="nodejs版本问题（yilia主题相关）"></a>nodejs版本问题（yilia主题相关）</h2><p>这里nodejs版本出现了问题，我用的主题<code>hexo-theme-yilia</code>需要nodejs v6，</p>
 <p>以前我一直用的node v4,这里就算你用<code>npm install -g npm-windows-upgrade</code>更新，也只会更新v4的最新版本</p>
 <p>需要从官网下载安装包 <a href="https://nodejs.org/en/download/" target="_blank" rel="external">下载页面</a></p>
-<p>这里我选择了msi包，</p>
+<p>这里我选择了msi包，覆盖安装即可。</p>
 <h2 id="命令行工具的选择"><a href="#命令行工具的选择" class="headerlink" title="命令行工具的选择"></a>命令行工具的选择</h2><p>windows下还是用git bash方便，本来准备从头到尾都用powershell，最后发现<code>hexo d</code>的时候，部署到github pages因为是git，在powershell下最后输入密钥的步骤无法认证，只有用git bash才会弹出输入密钥的框，具体什么原因懒得研究了，也不知道是不是记忆混乱了，反正用git bash就不会出错。</p>
 <p>(<em>这里更新下：可以使用无密码(passphrase)登陆，懒得重新弄证书了，不想试了，理论上无密码应该能用cmd、powershell发布了，具体自己试吧</em>)</p>
 <h2 id="部署hexo"><a href="#部署hexo" class="headerlink" title="部署hexo"></a>部署hexo</h2><p>部署好git、npm后，首先<code>npm install hexo-cli -g</code> ，之后输入<code>hexo version</code>检查，发现提示<br><code>ERROR Try running: &#39;npm install hexo --save&#39;</code>，</p>
@@ -201,7 +201,7 @@ os: Windows_NT 10.0.15063 win32 x64</code><br>，<code>hexo-theme-yilia</code>�
 <li><code># Site</code>下的描述信息</li>
 <li><code># URL</code>下url地址</li>
 <li><code>post_asset_folder: true</code>这个要和下面提到的插件<code>hexo-asset-image</code>配合</li>
-<li><code>theme: yilia</code></li>
+<li><code>theme: yilia</code> 使用yilia的话还需要下面章节的额外添加的配置</li>
 <li>部署方式，因为我是部署在github pages，和之前不一样repo必须用ssh路径<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">    type: git</div><div class="line">    repo: git@github.com:[name]/[name].github.io.git</div><div class="line">    branch: master</div></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -213,18 +213,19 @@ os: Windows_NT 10.0.15063 win32 x64</code><br>，<code>hexo-theme-yilia</code>�
 <li>点击<code>Use SSH</code></li>
 <li>复制路径粘贴到config里</li>
 </ul>
-<p>（更新下和主题有关的配置问题，用了目前最新版yilia后，点开关于我，出错了，不过有提示缺失模块，按照步骤来就行了）</p>
-<p>缺失模块。</p>
-<p>1、请确保node版本大于6.2</p>
+<h3 id="hexo-theme-yilia还需要的操作"><a href="#hexo-theme-yilia还需要的操作" class="headerlink" title="hexo-theme-yilia还需要的操作"></a><code>hexo-theme-yilia</code>还需要的操作</h3><p>更新下和主题有关的配置问题，用了目前最新版yilia后，点开侧边栏所有文章，出错了，不过有提示缺失模块，按照步骤来就行了</p>
+<p>1、请确保node版本大于6.2（<em>这条之前有提过，到这里应该已经确认完毕</em>）</p>
 <p>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br>npm i hexo-generator-json-content –save</p>
 <p>3、在根目录_config.yml里添加配置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">jsonContent:</div><div class="line">  meta: false</div><div class="line">  pages: false</div><div class="line">  posts:</div><div class="line">    title: true</div><div class="line">    date: true</div><div class="line">    path: true</div><div class="line">    text: false</div><div class="line">    raw: false</div><div class="line">    content: false</div><div class="line">    slug: false</div><div class="line">    updated: false</div><div class="line">    comments: false</div><div class="line">    link: false</div><div class="line">    permalink: false</div><div class="line">    excerpt: false</div><div class="line">    categories: false</div><div class="line">    tags: true</div></pre></td></tr></table></figure></p>
 <p>这里一定要从第一步开始检查node版本，我之前一直是用nodejs v4，这里需要去官网重新下nodejs v6安装包，参考前面nodejs部署的段落。</p>
 <h3 id="themes-yilia-config-yml"><a href="#themes-yilia-config-yml" class="headerlink" title="\themes\yilia\_config.yml"></a><code>\themes\yilia\_config.yml</code></h3><p>对比去年的config，感觉增加了不少行，但基本没太多区别，增加了一个打赏功能，而且是中文注释，没什么难度。</p>
-<p>主要是评论系统，之前基本都是用多说，现在多说倒闭了，肯定要换，具体参考下文评论系统部分</p>
+<p>主要是评论系统，之前基本都是用多说，现在多说倒闭了，肯定要换，具体参考下面评论系统部分。</p>
 <h2 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h2><ul>
-<li><p>首先是想用github pages的话，在config里填完部署信息后，必须要做这一步<br><code>npm install hexo-deployer-git --save</code></p>
+<li><p>首先是想用github pages的话，在config里填完部署信息后，必须要做这一步<br><code>npm install hexo-deployer-git --save</code>。</p>
 </li>
-<li><p>为了图片路径 <code>npm install https://github.com/CodeFalling/hexo-asset-image --save</code>，目的是为了在markdown编辑器下用md语法写图片路径，而不是用hexo自己定于的标记语言。具体原因可以参考网上搜索 <code>在 hexo 中无痛使用本地图片</code> 的教程</p>
+<li><p>为了图片路径 <code>npm install https://github.com/CodeFalling/hexo-asset-image --save</code>，目的是为了在markdown编辑器下用md语法写图片路径，而不是用hexo自己定于的标记语言。具体原因可以参考网上搜索 <code>在 hexo 中无痛使用本地图片</code> 的教程。</p>
+</li>
+<li><p>最后还有就是<code>hexo-theme-yilia</code>主题需要的<code>npm i hexo-generator-json-content --save</code>前面有做过这里就不需要了。</p>
 </li>
 </ul>
 <h1 id="评论系统"><a href="#评论系统" class="headerlink" title="评论系统"></a>评论系统</h1><p>多说马上要挂了，畅言需要备案，网易云跟帖必须自己有域名，github pages下基本告别国内评论系统了。</p>
@@ -253,6 +254,7 @@ os: Windows_NT 10.0.15063 win32 x64</code><br>，<code>hexo-theme-yilia</code>�
 <li>hexo内的插件，这种部署过一次就不会去记，新部署一个hexo文件夹很容易忘了还要装之前的插件，尤其基础的git插件影响到部署到github pages，不做备忘的话纯粹浪费时间。</li>
 <li>windows下用git bash，反正win下涉及类linux操作各种奇怪事情也不想多研究了，能不出错就不管了。</li>
 <li>写文章的时候记得用<code>&lt;!-- more --&gt;</code>定义文章在主页显示的范围。</li>
+<li><code>hexo-theme-yilia</code>除了config里指定theme，还需要nodejs v6和一系列插件、配置，这点在侧边栏选项里才会体现，部署完后不容易第一时间发觉。</li>
 </ul>
 <h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>本来想直接换hugo的，毕竟hexo如果换电脑用要部署环境之类麻烦的要死，纯命令行不弄个笔记记住步骤过段时间就忘了，怎么符合人类直觉怎么来才是最重要。</p>
 <p>可是hexo毕竟中文环境友善，主题之类国人开发的也多，hugo用中文关键词在google上几乎搜不到什么，hexo疑难杂症用中文总能搜出些信息。</p>

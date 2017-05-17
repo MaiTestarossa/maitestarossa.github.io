@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="https://maitestarossa.github.io">
   <title>半年多没使用hexo，更新、重新部署遇到的问题（基于github pages） | Mai&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="刚上手hexo一段时间就忘记用了，半年没使用现在想重新捡起来用又因为种种原因需要重新部署。 目前只记得hexo g 、hexo d、 hexo s这些基本命令，幸亏记在了evernote上，否则全忘光了，学习成本感觉不低，重新上手浪费了起码2,3小时。 现在谈谈自己在重新上手时遇到的问题。 理论上和我一样版本的话照做就行：hexo: 3.3.5 hexo-cli: 1.0.2 os: Window">
+  <meta name="description" content="刚上手hexo一段时间就忘记用了，半年没使用现在想重新捡起来用又因为种种原因需要重新部署。 目前只记得hexo g 、hexo d、 hexo s这些基本命令，幸亏记在了evernote上，否则全忘光了，学习成本感觉不低，重新上手浪费了起码2,3小时。 现在谈谈自己在重新上手时遇到的问题。 理论上如果你目前更新的版本和我一样的话照做就行：nodejs v6，hexo: 3.3.5 hexo-cli">
 <meta name="keywords" content="hexo,atom">
 <meta property="og:type" content="article">
 <meta property="og:title" content="半年多没使用hexo，更新、重新部署遇到的问题（基于github pages）">
 <meta property="og:url" content="https://maitestarossa.github.io/2017/05/17/updatehexo2017/index.html">
 <meta property="og:site_name" content="Mai&#39;s Blog">
-<meta property="og:description" content="刚上手hexo一段时间就忘记用了，半年没使用现在想重新捡起来用又因为种种原因需要重新部署。 目前只记得hexo g 、hexo d、 hexo s这些基本命令，幸亏记在了evernote上，否则全忘光了，学习成本感觉不低，重新上手浪费了起码2,3小时。 现在谈谈自己在重新上手时遇到的问题。 理论上和我一样版本的话照做就行：hexo: 3.3.5 hexo-cli: 1.0.2 os: Window">
-<meta property="og:updated_time" content="2017-05-17T10:02:05.031Z">
+<meta property="og:description" content="刚上手hexo一段时间就忘记用了，半年没使用现在想重新捡起来用又因为种种原因需要重新部署。 目前只记得hexo g 、hexo d、 hexo s这些基本命令，幸亏记在了evernote上，否则全忘光了，学习成本感觉不低，重新上手浪费了起码2,3小时。 现在谈谈自己在重新上手时遇到的问题。 理论上如果你目前更新的版本和我一样的话照做就行：nodejs v6，hexo: 3.3.5 hexo-cli">
+<meta property="og:updated_time" content="2017-05-17T10:34:50.749Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="半年多没使用hexo，更新、重新部署遇到的问题（基于github pages）">
-<meta name="twitter:description" content="刚上手hexo一段时间就忘记用了，半年没使用现在想重新捡起来用又因为种种原因需要重新部署。 目前只记得hexo g 、hexo d、 hexo s这些基本命令，幸亏记在了evernote上，否则全忘光了，学习成本感觉不低，重新上手浪费了起码2,3小时。 现在谈谈自己在重新上手时遇到的问题。 理论上和我一样版本的话照做就行：hexo: 3.3.5 hexo-cli: 1.0.2 os: Window">
+<meta name="twitter:description" content="刚上手hexo一段时间就忘记用了，半年没使用现在想重新捡起来用又因为种种原因需要重新部署。 目前只记得hexo g 、hexo d、 hexo s这些基本命令，幸亏记在了evernote上，否则全忘光了，学习成本感觉不低，重新上手浪费了起码2,3小时。 现在谈谈自己在重新上手时遇到的问题。 理论上如果你目前更新的版本和我一样的话照做就行：nodejs v6，hexo: 3.3.5 hexo-cli">
   
     <link rel="alternative" href="/atom.xml" title="Mai&#39;s Blog" type="application/atom+xml">
   
@@ -171,14 +171,18 @@
         <p>刚上手hexo一段时间就忘记用了，半年没使用现在想重新捡起来用又因为种种原因需要重新部署。</p>
 <p>目前只记得<code>hexo g</code> 、<code>hexo d</code>、 <code>hexo s</code>这些基本命令，幸亏记在了evernote上，否则全忘光了，学习成本感觉不低，重新上手浪费了起码2,3小时。</p>
 <p>现在谈谈自己在重新上手时遇到的问题。</p>
-<p>理论上和我一样版本的话照做就行：<br><code>hexo: 3.3.5
+<p>理论上如果你目前更新的版本和我一样的话照做就行：<br><code>nodejs v6</code>，<br><code>hexo: 3.3.5
 hexo-cli: 1.0.2
 os: Windows_NT 10.0.15063 win32 x64</code><br>，<code>hexo-theme-yilia</code>版本 Apr 28, 2017<br><a id="more"></a></p>
 <h1 id="重新部署"><a href="#重新部署" class="headerlink" title="重新部署"></a>重新部署</h1><p>半年没用发现powershell下输入<code>hexo</code>都没效果了，算了，反正准备从头梳理一遍。</p>
 <p>前面的步骤就不多说了，git环境、npm环境随便搜都能找到中文资料。</p>
-<p>windows下还是用git bash方便，本来准备从头到尾都用powershell，最后发现<code>hexo d</code>的时候，部署到github pages因为是git，在powershell下最后输入密钥的步骤无法认证，只有用git bash才会弹出输入密钥的框，具体什么原因懒得研究了，也不知道是不是记忆混乱了，反正用git bash就不会出错。</p>
+<h2 id="nodejs版本问题（yilia主题相关）"><a href="#nodejs版本问题（yilia主题相关）" class="headerlink" title="nodejs版本问题（yilia主题相关）"></a>nodejs版本问题（yilia主题相关）</h2><p>这里nodejs版本出现了问题，我用的主题<code>hexo-theme-yilia</code>需要nodejs v6，</p>
+<p>以前我一直用的node v4,这里就算你用<code>npm install -g npm-windows-upgrade</code>更新，也只会更新v4的最新版本</p>
+<p>需要从官网下载安装包 <a href="https://nodejs.org/en/download/" target="_blank" rel="external">下载页面</a></p>
+<p>这里我选择了msi包，</p>
+<h2 id="命令行工具的选择"><a href="#命令行工具的选择" class="headerlink" title="命令行工具的选择"></a>命令行工具的选择</h2><p>windows下还是用git bash方便，本来准备从头到尾都用powershell，最后发现<code>hexo d</code>的时候，部署到github pages因为是git，在powershell下最后输入密钥的步骤无法认证，只有用git bash才会弹出输入密钥的框，具体什么原因懒得研究了，也不知道是不是记忆混乱了，反正用git bash就不会出错。</p>
 <p>(<em>这里更新下：可以使用无密码(passphrase)登陆，懒得重新弄证书了，不想试了，理论上无密码应该能用cmd、powershell发布了，具体自己试吧</em>)</p>
-<p>部署好git、npm后，首先<code>npm install hexo-cli -g</code> ，之后输入<code>hexo version</code>检查，发现提示<br><code>ERROR Try running: &#39;npm install hexo --save&#39;</code>，</p>
+<h2 id="部署hexo"><a href="#部署hexo" class="headerlink" title="部署hexo"></a>部署hexo</h2><p>部署好git、npm后，首先<code>npm install hexo-cli -g</code> ，之后输入<code>hexo version</code>检查，发现提示<br><code>ERROR Try running: &#39;npm install hexo --save&#39;</code>，</p>
 <p>搞不懂电脑没重装过，只过了半年啥都没动，不管了，照样子<code>npm install hexo --save</code>，<code>hexo version</code>就能显示版本信息了</p>
 <h1 id="升级"><a href="#升级" class="headerlink" title="升级"></a>升级</h1><p>虽然不升级也能用，但既然都用了静态博客，总忍不住要尝尝新版本。</p>
 <p>看了一些文章后，参考别人的升级之坑，干脆重新部署，直接复制source文件夹最快。</p>
@@ -211,11 +215,10 @@ os: Windows_NT 10.0.15063 win32 x64</code><br>，<code>hexo-theme-yilia</code>�
 </ul>
 <p>（更新下和主题有关的配置问题，用了目前最新版yilia后，点开关于我，出错了，不过有提示缺失模块，按照步骤来就行了）</p>
 <p>缺失模块。</p>
-<p><del>1、请确保node版本大于6.2</del></p>
-<p><del>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br>npm i hexo-generator-json-content –save</del></p>
+<p>1、请确保node版本大于6.2</p>
+<p>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br>npm i hexo-generator-json-content –save</p>
 <p>3、在根目录_config.yml里添加配置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">jsonContent:</div><div class="line">  meta: false</div><div class="line">  pages: false</div><div class="line">  posts:</div><div class="line">    title: true</div><div class="line">    date: true</div><div class="line">    path: true</div><div class="line">    text: false</div><div class="line">    raw: false</div><div class="line">    content: false</div><div class="line">    slug: false</div><div class="line">    updated: false</div><div class="line">    comments: false</div><div class="line">    link: false</div><div class="line">    permalink: false</div><div class="line">    excerpt: false</div><div class="line">    categories: false</div><div class="line">    tags: true</div></pre></td></tr></table></figure></p>
-<p>经过测试，这里只需要做第三步，在config最后添加上面这段</p>
-<p>如果按照第二步开始做的话，<code>hexo g</code>的时候提示<code>hexo-generator-json-content</code>插件载入失败，不过不影响最后结果，已经装上的话就<code>npm uninstall hexo-generator-json-content</code></p>
+<p>这里一定要从第一步开始检查node版本，我之前一直是用nodejs v4，这里需要去官网重新下nodejs v6安装包，参考前面nodejs部署的段落。</p>
 <h3 id="themes-yilia-config-yml"><a href="#themes-yilia-config-yml" class="headerlink" title="\themes\yilia\_config.yml"></a><code>\themes\yilia\_config.yml</code></h3><p>对比去年的config，感觉增加了不少行，但基本没太多区别，增加了一个打赏功能，而且是中文注释，没什么难度。</p>
 <p>主要是评论系统，之前基本都是用多说，现在多说倒闭了，肯定要换，具体参考下文评论系统部分</p>
 <h2 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h2><ul>

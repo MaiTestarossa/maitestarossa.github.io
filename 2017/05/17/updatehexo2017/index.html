@@ -8,16 +8,16 @@
   <link rel="dns-prefetch" href="https://maitestarossa.github.io">
   <title>半年多没使用hexo，在github pages更新、重新布置遇到的问题 | Mai&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="刚上手hexo一段时间就忘记用了，半年没使用现在想重新捡起来用又因为种种原因需要重新部署。 目前只记得hexo g 、hexo d、 hexo s这些基本命令，幸亏记在了evernote上，否则全忘光了，学习成本感觉不低，重新上手浪费了起码2,3小时。 现在谈谈自己在重新上手时遇到的问题。 重新部署半年没用发现powershell下输入hexo都没效果了，算了，反正准备从头梳理一遍。 前面的步骤就">
+  <meta name="description" content="刚上手hexo一段时间就忘记用了，半年没使用现在想重新捡起来用又因为种种原因需要重新部署。 目前只记得hexo g 、hexo d、 hexo s这些基本命令，幸亏记在了evernote上，否则全忘光了，学习成本感觉不低，重新上手浪费了起码2,3小时。 现在谈谈自己在重新上手时遇到的问题。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="半年多没使用hexo，在github pages更新、重新布置遇到的问题">
 <meta property="og:url" content="https://maitestarossa.github.io/2017/05/17/updatehexo2017/index.html">
 <meta property="og:site_name" content="Mai&#39;s Blog">
-<meta property="og:description" content="刚上手hexo一段时间就忘记用了，半年没使用现在想重新捡起来用又因为种种原因需要重新部署。 目前只记得hexo g 、hexo d、 hexo s这些基本命令，幸亏记在了evernote上，否则全忘光了，学习成本感觉不低，重新上手浪费了起码2,3小时。 现在谈谈自己在重新上手时遇到的问题。 重新部署半年没用发现powershell下输入hexo都没效果了，算了，反正准备从头梳理一遍。 前面的步骤就">
-<meta property="og:updated_time" content="2017-05-17T09:19:09.229Z">
+<meta property="og:description" content="刚上手hexo一段时间就忘记用了，半年没使用现在想重新捡起来用又因为种种原因需要重新部署。 目前只记得hexo g 、hexo d、 hexo s这些基本命令，幸亏记在了evernote上，否则全忘光了，学习成本感觉不低，重新上手浪费了起码2,3小时。 现在谈谈自己在重新上手时遇到的问题。">
+<meta property="og:updated_time" content="2017-05-17T09:31:12.334Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="半年多没使用hexo，在github pages更新、重新布置遇到的问题">
-<meta name="twitter:description" content="刚上手hexo一段时间就忘记用了，半年没使用现在想重新捡起来用又因为种种原因需要重新部署。 目前只记得hexo g 、hexo d、 hexo s这些基本命令，幸亏记在了evernote上，否则全忘光了，学习成本感觉不低，重新上手浪费了起码2,3小时。 现在谈谈自己在重新上手时遇到的问题。 重新部署半年没用发现powershell下输入hexo都没效果了，算了，反正准备从头梳理一遍。 前面的步骤就">
+<meta name="twitter:description" content="刚上手hexo一段时间就忘记用了，半年没使用现在想重新捡起来用又因为种种原因需要重新部署。 目前只记得hexo g 、hexo d、 hexo s这些基本命令，幸亏记在了evernote上，否则全忘光了，学习成本感觉不低，重新上手浪费了起码2,3小时。 现在谈谈自己在重新上手时遇到的问题。">
   
     <link rel="alternative" href="/atom.xml" title="Mai&#39;s Blog" type="application/atom+xml">
   
@@ -169,7 +169,7 @@
       
         <p>刚上手hexo一段时间就忘记用了，半年没使用现在想重新捡起来用又因为种种原因需要重新部署。</p>
 <p>目前只记得<code>hexo g</code> 、<code>hexo d</code>、 <code>hexo s</code>这些基本命令，幸亏记在了evernote上，否则全忘光了，学习成本感觉不低，重新上手浪费了起码2,3小时。</p>
-<p>现在谈谈自己在重新上手时遇到的问题。</p>
+<p>现在谈谈自己在重新上手时遇到的问题。<br><a id="more"></a></p>
 <h1 id="重新部署"><a href="#重新部署" class="headerlink" title="重新部署"></a>重新部署</h1><p>半年没用发现powershell下输入<code>hexo</code>都没效果了，算了，反正准备从头梳理一遍。</p>
 <p>前面的步骤就不多说了，git环境、npm环境随便搜都能找到中文资料。</p>
 <p>windows下还是用git bash方便，本来准备从头到尾都用powershell，最后发现<code>hexo d</code>的时候，部署到github pages因为是git，在powershell下最后输入密钥的步骤无法认证，只有用git bash才会弹出输入密钥的框，具体什么原因懒得研究了，也不知道是不是记忆混乱了，反正用git bash就不会出错。</p>
@@ -231,11 +231,13 @@
 <li><code>markdown-writer</code>，md快速插入格式用，atom要使用这种插件要在packages菜单深处才能用，老实说不好用，就和chrome一样，明明支持扩展，但对扩展的限制格外严格，无法控制tab、书签栏导致chrome的定制性远远不如firefox，连标签管理很多扩展都只能另辟蹊径用new tab页代替，而atom这些插件大体和这种思路类似，2个字 难受。</li>
 <li><code>markdown-assistant</code>、<code>qiniu-uploader</code>用来实现自动复制图片传到图床，就像小书匠以及那些云md客户端一样方便的功能，但我都保存在github pages上，结合<code>hexo-asset-image</code>插件管理图片，目前还没必要用图床，为了更快的启动速度，暂时没装这些、</li>
 </ul>
-<h1 id="完成"><a href="#完成" class="headerlink" title="完成"></a>完成</h1><p>做完以上步骤应该没什么遗漏了，试试<code>hexo new newpost</code>写一篇文章</p>
+<h1 id="完成"><a href="#完成" class="headerlink" title="完成"></a>完成</h1><p>做完以上步骤应该没什么遗漏了，试试<code>hexo new newpost</code>写一篇文章，</p>
+<p>这里有一处容易忘记的就是<code>&lt;!-- more --&gt;</code>，毕竟不是md语法，早忘了，写完这篇文章部署后才发现展开全文得用这个关键字。</p>
 <p>然后强迫症确保清空一遍<code>hexo clean</code>，<code>hexo g</code>，<code>hexo s</code>预览下，最后<code>hexo d</code>发布到github pages上</p>
 <h1 id="总结容易忘记和浪费时间研究的坑点"><a href="#总结容易忘记和浪费时间研究的坑点" class="headerlink" title="总结容易忘记和浪费时间研究的坑点"></a>总结容易忘记和浪费时间研究的坑点</h1><ul>
-<li>hexo内的插件，这种部署过一次也不会记，新部署一个hexo文件夹很容易忘了还要装之前的插件。</li>
+<li>hexo内的插件，这种部署过一次就不会去记，新部署一个hexo文件夹很容易忘了还要装之前的插件，尤其基础的git插件影响到部署到github pages，不做备忘的话纯粹浪费时间。</li>
 <li>windows下用git bash，反正win下涉及类linux操作各种奇怪事情也不想多研究了，能不出错就不管了。</li>
+<li>写文章的时候记得用<code>&lt;!-- more --&gt;</code>定义文章在主页显示的范围。</li>
 </ul>
 <h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>本来想直接换hugo的，毕竟hexo如果换电脑用要部署环境之类麻烦的要死，纯命令行不弄个笔记记住步骤过段时间就忘了，怎么符合人类直觉怎么来才是最重要。</p>
 <p>可是hexo毕竟中文环境友善，主题之类国人开发的也多，hugo用中文关键词在google上几乎搜不到什么，hexo疑难杂症用中文总能搜出些信息。</p>

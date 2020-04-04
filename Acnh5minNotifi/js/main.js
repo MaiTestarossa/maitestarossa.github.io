@@ -43,8 +43,14 @@ function flagSwtich() {
 
 function startTimer(duration, display) {
   var date = new Date;
-  var minute = duration - 1 - date.getMinutes() % 5 ;
   var sec = 60 - date.getSeconds();
+  var minute = duration / 60 - date.getMinutes() % 5 - 1 ;
+  if (sec === 60){
+    minute += 1;
+  }
+
+
+
   var leftMins = minute * 60 + sec;
   console.log(date);
   console.log("duration:" + duration);

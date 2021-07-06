@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>dell on Mai blog</title>
-    <link>https://maitestarossa.github.io/tags/dell/</link>
-    <description>Recent content in dell on Mai blog</description>
+    <title>PC on Mai blog</title>
+    <link>https://maitestarossa.github.io/categories/pc/</link>
+    <description>Recent content in PC on Mai blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 06 Jul 2021 16:43:56 +0900</lastBuildDate><atom:link href="https://maitestarossa.github.io/tags/dell/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Jul 2021 16:43:56 +0900</lastBuildDate><atom:link href="https://maitestarossa.github.io/categories/pc/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>笔记本选购及噪音研究（持续更新）</title>
       <link>https://maitestarossa.github.io/post/notebook-fan/</link>

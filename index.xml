@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mai blog</title>
+    <link>https://maitestarossa.github.io/</link>
+    <description>Recent content on Mai blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 06 Jul 2021 16:43:56 +0900</lastBuildDate><atom:link href="https://maitestarossa.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>https://maitestarossa.github.io/about/</link>
+      <pubDate>Sun, 20 Aug 2017 21:38:52 +0800</pubDate>
+      
+      <guid>https://maitestarossa.github.io/about/</guid>
+      <description>没有介绍</description>
+    </item>
+    
+    <item>
+      <title>笔记本风扇噪音调节研究</title>
+      <link>https://maitestarossa.github.io/post/notebook-fan/</link>
+      <pubDate>Tue, 06 Jul 2021 16:43:56 +0900</pubDate>
+      
+      <guid>https://maitestarossa.github.io/post/notebook-fan/</guid>
+      <description>更新记录： 2021年7月6日 添加DELL G15 5511噪音评价 这2年amd和intel的笔记本买了好几个，在噪音问题几乎没一个能满意的。 写下一些</description>
+    </item>
+    
+  </channel>
+</rss>

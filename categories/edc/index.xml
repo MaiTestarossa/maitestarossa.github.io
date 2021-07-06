@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>EDC on Mai blog</title>
+    <link>https://maitestarossa.github.io/categories/edc/</link>
+    <description>Recent content in EDC on Mai blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 06 Jul 2021 18:18:26 +0900</lastBuildDate><atom:link href="https://maitestarossa.github.io/categories/edc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何使用安卓备机</title>
+      <link>https://maitestarossa.github.io/post/secondary-android/</link>
+      <pubDate>Tue, 06 Jul 2021 18:18:26 +0900</pubDate>
+      
+      <guid>https://maitestarossa.github.io/post/secondary-android/</guid>
+      <description>导言 用了几年ios，信号差没通话录音、没完整通话记录，在国内环境可以说除了电话功能外什么都好的iphone，不得不买个安卓机当备机。 智能机从</description>
+    </item>
+    
+  </channel>
+</rss>

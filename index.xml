@@ -6,7 +6,7 @@
     <description>Recent content on Mai blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 06 Jul 2021 18:18:26 +0900</lastBuildDate><atom:link href="https://maitestarossa.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 07 Jul 2021 19:41:42 +0900</lastBuildDate><atom:link href="https://maitestarossa.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
       <link>https://maitestarossa.github.io/about/</link>
@@ -14,6 +14,15 @@
       
       <guid>https://maitestarossa.github.io/about/</guid>
       <description>没有介绍</description>
+    </item>
+    
+    <item>
+      <title>StackExchange.Redis timeout 问题研究</title>
+      <link>https://maitestarossa.github.io/post/se-redis-timeout/</link>
+      <pubDate>Wed, 07 Jul 2021 19:41:42 +0900</pubDate>
+      
+      <guid>https://maitestarossa.github.io/post/se-redis-timeout/</guid>
+      <description>.net下最常用的redis库StackExchange.Redistimeout问题似乎是个老生常谈的问题，不管是framework还是c</description>
     </item>
     
     <item>

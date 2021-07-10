@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Firefox结合TreeStyleTab外观定制 - Mai blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Mai" /><meta name="description" content="新买了电脑，很多年没翻新过的Firefox配置文件也打算完整重新部署了，先从外观入手。 社区 reddit的r/FirefoxCSS上有很多式样" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.85.0 with theme even" />
+
+
+<link rel="canonical" href="https://maitestarossa.github.io/post/firefox-chromecss-with-tst/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Firefox结合TreeStyleTab外观定制" />
+<meta property="og:description" content="新买了电脑，很多年没翻新过的Firefox配置文件也打算完整重新部署了，先从外观入手。 社区 reddit的r/FirefoxCSS上有很多式样" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://maitestarossa.github.io/post/firefox-chromecss-with-tst/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-07-10T19:50:38+09:00" />
+<meta property="article:modified_time" content="2021-07-10T19:50:38+09:00" />
+
+<meta itemprop="name" content="Firefox结合TreeStyleTab外观定制">
+<meta itemprop="description" content="新买了电脑，很多年没翻新过的Firefox配置文件也打算完整重新部署了，先从外观入手。 社区 reddit的r/FirefoxCSS上有很多式样"><meta itemprop="datePublished" content="2021-07-10T19:50:38+09:00" />
+<meta itemprop="dateModified" content="2021-07-10T19:50:38+09:00" />
+<meta itemprop="wordCount" content="871">
+<meta itemprop="keywords" content="firefox,browser,software," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Firefox结合TreeStyleTab外观定制"/>
+<meta name="twitter:description" content="新买了电脑，很多年没翻新过的Firefox配置文件也打算完整重新部署了，先从外观入手。 社区 reddit的r/FirefoxCSS上有很多式样"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Mai</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Mai</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Firefox结合TreeStyleTab外观定制</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2021-07-10 </span>
+        <div class="post-category">
+            <a href="/categories/software/"> Software </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#社区">社区</a></li>
+    <li><a href="#tree-style-tab">Tree Style Tab</a></li>
+    <li><a href="#userchromecss">userChrome.css</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>新买了电脑，很多年没翻新过的Firefox配置文件也打算完整重新部署了，先从外观入手。</p>
+<h1 id="社区">社区</h1>
+<p>reddit的r/FirefoxCSS上有很多式样可以参考</p>
+<p><a href="https://www.reddit.com/r/FirefoxCSS">https://www.reddit.com/r/FirefoxCSS</a></p>
+<p>TreeStyleTab相关式样和一些隐藏标题栏之类操作userChrome.css的代码片段</p>
+<p><a href="https://github.com/piroor/treestyletab/wiki/Code-snippets-for-custom-style-rules">https://github.com/piroor/treestyletab/wiki/Code-snippets-for-custom-style-rules</a></p>
+<h1 id="tree-style-tab">Tree Style Tab</h1>
+<p>作为Firefox最无可替代的扩展，最好用的树状标签页，可以直接css代码更改外观，有大量子扩展增强功能。</p>
+<p>附上自己用的式样，主要目的是追求最大效率利用树状栏，紧凑效果。</p>
+<p>扩展推荐</p>
+<p>Tree Style Tab Mouse Wheel <a href="https://addons.mozilla.org/en-US/firefox/addon/tree-style-tab-mouse-wheel/">https://addons.mozilla.org/en-US/firefox/addon/tree-style-tab-mouse-wheel/</a></p>
+<p>鼠标悬停后滚轮切换标签，一般国产浏览器才会带的功能，Edge、Chrome都无法做到，最有用的功能。配上罗技anywhere 3的电磁滚轮，非常适合开几十个标签刷论坛查资料。</p>
+<p>TST Colored Tabs <a href="https://addons.mozilla.org/en-US/firefox/addon/tst-colored-tabs/">https://addons.mozilla.org/en-US/firefox/addon/tst-colored-tabs/</a></p>
+<p>彩色化标签，主要可以正则上色，比如把taobao相关域名上橙色，weibo上红色，提醒自己后台开着这些负载重且会在后台不断请求网络的流氓页面。</p>
+<p>TST Bookmarks Subpanel <a href="https://addons.mozilla.org/zh-CN/firefox/addon/tst-bookmarks-subpanel/">https://addons.mozilla.org/zh-CN/firefox/addon/tst-bookmarks-subpanel/</a></p>
+<p>在TST标签栏下面展示书签栏，有效利用空余面积。实际上我书签放在地址栏左边，基本不会用到这个。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-css" data-lang="css">
+<span class="c">/* 新建的未读标签红色表示 */</span>
+<span class="nt">tab-item</span><span class="p">.</span><span class="nc">unread</span> <span class="p">.</span><span class="nc">label-content</span> <span class="p">{</span>
+  <span class="k">color</span><span class="p">:</span> <span class="mh">#D00000</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* 标签关闭按钮只有在鼠标悬停时显示 */</span>
+<span class="p">.</span><span class="nc">tab</span><span class="p">:</span><span class="nd">not</span><span class="o">(</span><span class="p">:</span><span class="nd">hover</span><span class="o">)</span> <span class="p">.</span><span class="nc">closebox</span><span class="p">{</span>
+	<span class="k">display</span><span class="p">:</span><span class="kc">none</span>
+<span class="p">}</span>
+
+<span class="c">/* 用favicon图标代替箭头，展开和折叠书签树，有效节约宽度 */</span>
+<span class="nt">tab-item</span> <span class="nt">tab-twisty</span> <span class="p">{</span>
+  <span class="k">margin-right</span><span class="p">:</span> <span class="mi">-1</span><span class="kt">em</span><span class="p">;</span>
+  <span class="k">opacity</span><span class="p">:</span> <span class="mi">0</span> <span class="cp">!important</span><span class="p">;</span>
+  <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span><span class="p">;</span>
+  <span class="k">z-index</span><span class="p">:</span> <span class="mi">10000</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* 左右宽度更紧凑的调整 */</span>
+<span class="nt">tab-item-substance</span> <span class="p">{</span>
+  <span class="k">border</span><span class="p">:</span> <span class="kc">solid</span> <span class="mi">0</span><span class="kt">px</span> <span class="mh">#000000</span><span class="mi">12</span><span class="p">;</span> 
+<span class="p">}</span>
+<span class="nt">tab-item</span><span class="p">:</span><span class="nd">not</span><span class="o">(</span><span class="p">.</span><span class="nc">pinned</span><span class="o">)</span> <span class="nt">tab-item-substance</span> <span class="p">{</span>
+  <span class="k">padding-left</span><span class="p">:</span> <span class="mi">0</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;</span> <span class="c">/* !important is required when there are enough tabs to cause a scrollbar */</span>
+<span class="p">}</span>
+
+<span class="c">/* 标签高度，25px比较紧凑 */</span>
+<span class="nt">tab-item</span> <span class="p">{</span>
+  <span class="nv">--tab-size</span><span class="p">:</span> <span class="mi">25</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;</span>
+  <span class="k">height</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">tab</span><span class="o">-</span><span class="n">size</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h1 id="userchromecss">userChrome.css</h1>
+<p>该文件主要用于修改Firefox外观，在配置文件夹内新建<code>chrome/userChrome.css</code>文件，并在<code>about:config</code>中查找userprof后找到相关字段设置为<code>true</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-css" data-lang="css"><span class="c">/* 隐藏侧边栏的Tree Style Tab标题栏，只有切换到TST标签才会隐藏 */</span>
+<span class="p">#</span><span class="nn">sidebar-box</span><span class="o">[</span><span class="nt">sidebarcommand</span><span class="o">=</span><span class="s2">&#34;treestyletab_piro_sakura_ne_jp-sidebar-action&#34;</span><span class="o">]</span> <span class="p">#</span><span class="nn">sidebar-header</span> <span class="p">{</span>
+  <span class="k">display</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* 隐藏收藏夹书签文字，只显示favicon，当鼠标悬停时展开该书签文字 */</span>
+<span class="p">#</span><span class="nn">personal-bookmarks</span> <span class="p">.</span><span class="nc">bookmark-item</span> <span class="o">&gt;</span> <span class="p">.</span><span class="nc">toolbarbutton-text</span> <span class="p">{</span> <span class="k">display</span><span class="p">:</span><span class="kc">none</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">#</span><span class="nn">personal-bookmarks</span> <span class="p">.</span><span class="nc">bookmark-item</span><span class="p">:</span><span class="nd">hover</span> <span class="o">&gt;</span> <span class="p">.</span><span class="nc">toolbarbutton-text</span> <span class="p">{</span> <span class="k">display</span><span class="p">:</span><span class="kc">block</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="c">/* 隐藏顶部标签页，极细化顶部栏，并缩小关闭放大缩小按钮到右上角 */</span>
+<span class="p">#</span><span class="nn">titlebar</span> <span class="p">{</span><span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">-20</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;}</span>
+<span class="p">#</span><span class="nn">tabbrowser-tabs</span> <span class="p">{</span><span class="k">visibility</span><span class="p">:</span> <span class="kc">collapse</span> <span class="cp">!important</span><span class="p">;}</span>
+<span class="p">#</span><span class="nn">nav-bar</span> <span class="p">{</span><span class="k">margin-right</span><span class="p">:</span> <span class="mi">0</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;}</span>
+<span class="p">#</span><span class="nn">TabsToolbar</span> <span class="p">{</span>
+  <span class="k">height</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;</span>
+  <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">15</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;</span>
+  <span class="k">margin-top</span><span class="p">:</span> <span class="mi">-5</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">Mai</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2021-07-10
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/firefox/">firefox</a>
+          <a href="/tags/browser/">browser</a>
+          <a href="/tags/software/">software</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/se-redis-timeout/">
+            <span class="next-text nav-default">StackExchange.Redis timeout 问题研究</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+            repo="MaiTestarossa/maitestarossa.github.io"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+  <a href="https://maitestarossa.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>Mai</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

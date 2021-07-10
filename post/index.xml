@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Mai blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 07 Jul 2021 19:41:42 +0900</lastBuildDate><atom:link href="https://maitestarossa.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 10 Jul 2021 19:50:38 +0900</lastBuildDate><atom:link href="https://maitestarossa.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Firefox结合TreeStyleTab外观定制</title>
+      <link>https://maitestarossa.github.io/post/firefox-chromecss-with-tst/</link>
+      <pubDate>Sat, 10 Jul 2021 19:50:38 +0900</pubDate>
+      
+      <guid>https://maitestarossa.github.io/post/firefox-chromecss-with-tst/</guid>
+      <description>新买了电脑，很多年没翻新过的Firefox配置文件也打算完整重新部署了，先从外观入手。 社区 reddit的r/FirefoxCSS上有很多式样</description>
+    </item>
+    
     <item>
       <title>StackExchange.Redis timeout 问题研究</title>
       <link>https://maitestarossa.github.io/post/se-redis-timeout/</link>

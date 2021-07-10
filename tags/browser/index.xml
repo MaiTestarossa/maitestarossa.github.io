@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>browser on Mai blog</title>
+    <link>https://maitestarossa.github.io/tags/browser/</link>
+    <description>Recent content in browser on Mai blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 10 Jul 2021 19:50:38 +0900</lastBuildDate><atom:link href="https://maitestarossa.github.io/tags/browser/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Firefox结合TreeStyleTab外观定制</title>
+      <link>https://maitestarossa.github.io/post/firefox-chromecss-with-tst/</link>
+      <pubDate>Sat, 10 Jul 2021 19:50:38 +0900</pubDate>
+      
+      <guid>https://maitestarossa.github.io/post/firefox-chromecss-with-tst/</guid>
+      <description>新买了电脑，很多年没翻新过的Firefox配置文件也打算完整重新部署了，先从外观入手。 社区 reddit的r/FirefoxCSS上有很多式样</description>
+    </item>
+    
+  </channel>
+</rss>

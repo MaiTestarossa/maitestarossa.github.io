@@ -6,14 +6,23 @@
     <description>Recent content in browser on Mai blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 10 Jul 2021 19:50:38 +0900</lastBuildDate><atom:link href="https://maitestarossa.github.io/tags/browser/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 10 Jul 2021 19:51:23 +0900</lastBuildDate><atom:link href="https://maitestarossa.github.io/tags/browser/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Firefox扩展、配置记录</title>
+      <link>https://maitestarossa.github.io/post/firefox-configuration/</link>
+      <pubDate>Sat, 10 Jul 2021 19:51:23 +0900</pubDate>
+      
+      <guid>https://maitestarossa.github.io/post/firefox-configuration/</guid>
+      <description>本文主要记录自己用的Firefox扩展推荐等。 我从Firefox 1.0a开始高强度使用Firefox。近几年基本是CentBrowser和F</description>
+    </item>
+    
     <item>
       <title>Firefox结合TreeStyleTab外观定制</title>
       <link>https://maitestarossa.github.io/post/firefox-chromecss-with-tst/</link>
       <pubDate>Sat, 10 Jul 2021 19:50:38 +0900</pubDate>
       
       <guid>https://maitestarossa.github.io/post/firefox-chromecss-with-tst/</guid>
-      <description>新买了电脑，很多年没翻新过的Firefox配置文件也打算完整重新部署了，先从外观入手。 社区 reddit的r/FirefoxCSS上有很多式样</description>
+      <description>2021年7月11日 更新了Tab Unloader for Tree Style Tab和相关式样 新买了电脑，很多年没翻新过的Firefox配置文件也打算完整重新部署了，先从外观入手</description>
     </item>
     
   </channel>

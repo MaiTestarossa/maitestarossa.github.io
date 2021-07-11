@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Mai" /><meta name="description" content="更新记录： 2021年7月9日 添加yoga 14s 2021年7月6日 添加DELL 灵越 16plus 7610 和 ThinkBook 16p 2021年7月6日 添加DELL G15 5511噪音评价 序言 这" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="Mai" /><meta name="description" content="更新记录： 2021年7月12日 添加杀毒软件对风扇噪音的影响 2021年7月9日 添加yoga 14s 2021年7月6日 添加DELL 灵越 16plus 7610 和 ThinkBook 16p 202" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -40,19 +40,19 @@
 
 
 <meta property="og:title" content="笔记本选购及噪音研究（持续更新）" />
-<meta property="og:description" content="更新记录： 2021年7月9日 添加yoga 14s 2021年7月6日 添加DELL 灵越 16plus 7610 和 ThinkBook 16p 2021年7月6日 添加DELL G15 5511噪音评价 序言 这" />
+<meta property="og:description" content="更新记录： 2021年7月12日 添加杀毒软件对风扇噪音的影响 2021年7月9日 添加yoga 14s 2021年7月6日 添加DELL 灵越 16plus 7610 和 ThinkBook 16p 202" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://maitestarossa.github.io/post/notebook-fan/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2021-07-06T16:43:56+09:00" />
 <meta property="article:modified_time" content="2021-07-06T16:43:56+09:00" />
 
 <meta itemprop="name" content="笔记本选购及噪音研究（持续更新）">
-<meta itemprop="description" content="更新记录： 2021年7月9日 添加yoga 14s 2021年7月6日 添加DELL 灵越 16plus 7610 和 ThinkBook 16p 2021年7月6日 添加DELL G15 5511噪音评价 序言 这"><meta itemprop="datePublished" content="2021-07-06T16:43:56+09:00" />
+<meta itemprop="description" content="更新记录： 2021年7月12日 添加杀毒软件对风扇噪音的影响 2021年7月9日 添加yoga 14s 2021年7月6日 添加DELL 灵越 16plus 7610 和 ThinkBook 16p 202"><meta itemprop="datePublished" content="2021-07-06T16:43:56+09:00" />
 <meta itemprop="dateModified" content="2021-07-06T16:43:56+09:00" />
-<meta itemprop="wordCount" content="4370">
+<meta itemprop="wordCount" content="5175">
 <meta itemprop="keywords" content="笔记本,中文,噪音,dell,联想," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="笔记本选购及噪音研究（持续更新）"/>
-<meta name="twitter:description" content="更新记录： 2021年7月9日 添加yoga 14s 2021年7月6日 添加DELL 灵越 16plus 7610 和 ThinkBook 16p 2021年7月6日 添加DELL G15 5511噪音评价 序言 这"/>
+<meta name="twitter:description" content="更新记录： 2021年7月12日 添加杀毒软件对风扇噪音的影响 2021年7月9日 添加yoga 14s 2021年7月6日 添加DELL 灵越 16plus 7610 和 ThinkBook 16p 202"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -153,7 +153,6 @@
         <li><a href="#噪音优点">噪音优点：</a></li>
         <li><a href="#噪音缺点">噪音缺点：</a></li>
         <li><a href="#其他缺点">其他缺点：</a></li>
-        <li><a href="#噪音优化">噪音优化：</a></li>
       </ul>
     </li>
     <li><a href="#dell-灵越-16plus-7610">DELL 灵越 16plus 7610</a>
@@ -165,6 +164,18 @@
     </li>
     <li><a href="#thinkbook-16p-5800h">ThinkBook 16p 5800h</a></li>
     <li><a href="#yoga-14s-5800h">yoga 14s 5800h</a></li>
+    <li><a href="#降低噪音的措施">降低噪音的措施</a>
+      <ul>
+        <li><a href="#使用低负载时cpu开销低的杀毒软件">使用低负载时cpu开销低的杀毒软件</a>
+          <ul>
+            <li><a href="#不要使用windows自带的杀毒软件">不要使用Windows自带的杀毒软件</a></li>
+            <li><a href="#eset-antivirus-eav">ESET Antivirus (EAV)</a></li>
+            <li><a href="#火绒">火绒</a></li>
+          </ul>
+        </li>
+        <li><a href="#注册表启用电源计划散热方案等功能">注册表启用电源计划散热方案等功能：</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
   </div>
@@ -172,6 +183,7 @@
     <div class="post-content">
       <blockquote>
 <p>更新记录：</p>
+<p>2021年7月12日 添加杀毒软件对风扇噪音的影响</p>
 <p>2021年7月9日 添加yoga 14s</p>
 <p>2021年7月6日 添加DELL 灵越 16plus 7610 和 ThinkBook 16p</p>
 <p>2021年7月6日 添加DELL G15 5511噪音评价</p>
@@ -217,11 +229,6 @@
 <li>有雷电4却不支持pd充电，出门想要不带砖头适配器没有替代选择，等于背包重量必须保持3.5kg以上。</li>
 <li>没有指纹没有hello摄像头，习惯用密码管理器生成随机密码</li>
 </ol>
-<h2 id="噪音优化">噪音优化：</h2>
-<p>尝试了几天优化噪音，最终比较舒服的方案是改电源计划，首先通过注册表打开电源计划高级设置里的<code>系统散热方式</code>和<code>最大处理器状态</code>。</p>
-<p>散热方式选<code>被动</code>看上去能缓解缺点5的情况，但不是太明显，风扇还是容易突然转。</p>
-<p><code>最大处理器状态</code>修改到99%意思就是关闭睿频效果，测下来cpu性能大减但负载温度都在50多度，风扇不会转太多。</p>
-<p>通过高级设置修改只能说是利用windows本身妥协，面对现在笔记本本身风扇策略无法令人满意又没法自定义的情况，对我个人而言宁愿用ipad上网。</p>
 <h1 id="dell-灵越-16plus-7610">DELL 灵越 16plus 7610</h1>
 <p>首发入了顶配1T 32G版，最终因为有坏点退了。</p>
 <p>网上发售前不看好这款笔记本主要是因为散热垃圾，后出风口在屏幕轴里，实测从轴下方出风，效率肯定远不如正常的后出风口。实际体验本以为60w的显卡满载噪音不会高，结果还是达到了游戏本起飞的级别。</p>
@@ -258,6 +265,24 @@
 <p>综合评价：★★★☆☆ 首发时品控抽奖严重，耍猴程度也很高。但比thinkbook16p问题少很多，难怪16p是偷偷上架，而小新和yoga是正经宣发后上架。总之联想没有品控和耍猴问题肯定是4星5星的评价。</p>
 <p>后来发现16g内存还是太小了，现代电脑太多electron套皮软件，别说notion、teams这类软件，连个罗技的ghub都是个前端技术套皮。16g也就玩玩游戏和office能用，要高强度刷论坛查资料配上那堆浏览器套壳软件，16g只能温饱。</p>
 <p>所以后面大概也不会再考虑板载16g内存的本子了。就算被迫选16h的mac笔记本，也是用作轻度上网、编程，为了避免噪音的无奈选择而已。</p>
+<h1 id="降低噪音的措施">降低噪音的措施</h1>
+<h2 id="使用低负载时cpu开销低的杀毒软件">使用低负载时cpu开销低的杀毒软件</h2>
+<h3 id="不要使用windows自带的杀毒软件">不要使用Windows自带的杀毒软件</h3>
+<p>Windows10自带的windows defender对低负载时风扇影响很大，尤其风扇策略看cpu频率上去使用率上去就马上开转的笔记本，即使计划任务里更改空闲时扫描等一系列措施也是无效的。（看讨论会被defender改回去）而且即使没有空闲扫描，defender也会时不时突发占单核30-50%（11800h下cpu占用），此时风扇又容易频繁启动。</p>
+<p>但台式机一般我就直接用微软自带了</p>
+<h3 id="eset-antivirus-eav">ESET Antivirus (EAV)</h3>
+<p>最推荐这个，换装后明显待机风扇好很多，虽然是收费的，淘宝正规渠道只要77元3年1电脑。作为十几年前当时口碑最好的轻量级杀软nod32，改名ESET后有一段时间因为变重评价很差，但最近重新研究发现在海外社区讨论性能杀毒能力平衡的杀软一般都带上ESET。</p>
+<p>有实时防护有HIPS有网页防护。目前还在试用，唯一担心的是国区key是否会为了相关合规搞“云上贵州”之类操作，但不管什么区都是官方下的安装包。</p>
+<p>另外还有性价比更好的ESET Internet Security，功能比EAV多点，还有anroid端支持等，价格也只是贵10元，87元3年。我只是为了降低后台开销，EAV就行了。</p>
+<h3 id="火绒">火绒</h3>
+<p>虽然曾经用了很久，作为面向国内用户的产品一直以来节操也保持的非常好。但考虑到近年国内互联网内卷环境，不是很想推荐，毕竟既要合规又要吃饭，环境太残酷。</p>
+<p>作为杀软能力一般评价都较差，但非常轻量化，实用工具多，可以自定义很多规则防止国内流氓扫描等等。</p>
+<h2 id="注册表启用电源计划散热方案等功能">注册表启用电源计划散热方案等功能：</h2>
+<p>尝试了几天优化噪音，最终比较舒服的方案是改电源计划，首先通过注册表打开电源计划高级设置里的<code>系统散热方式</code>和<code>最大处理器状态</code>。</p>
+<p>散热方式选<code>被动</code>看上去能缓解缺点5的情况，但不是太明显，风扇还是容易突然转。</p>
+<p><code>最大处理器状态</code>修改到99%意思就是关闭睿频效果，测下来cpu性能大减但负载温度都在50多度，风扇不会转太多。</p>
+<p>通过高级设置修改只能说是利用windows本身妥协，面对现在笔记本本身风扇策略无法令人满意又没法自定义的情况，对我个人而言宁愿用ipad上网。</p>
+<p>这些操作对风扇、性能的影响很容易联想到可能年底就会发布的大小核技术，能让windows自己调节，大部分中低负载时候自动用小核，那噪音问题、热量问题大幅改善就有希望了。但最好不要抱希望，连个ec风扇控制都没法让我舒服，不信任各家笔记本厂商对这类评测不会提到的体验下功夫。</p>
 
     </div>
 

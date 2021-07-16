@@ -6,7 +6,7 @@
     <description>Recent content on Mai blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 10 Jul 2021 19:51:23 +0900</lastBuildDate><atom:link href="https://maitestarossa.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 16 Jul 2021 11:41:09 +0800</lastBuildDate><atom:link href="https://maitestarossa.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
       <link>https://maitestarossa.github.io/about/</link>
@@ -14,6 +14,15 @@
       
       <guid>https://maitestarossa.github.io/about/</guid>
       <description>没有介绍</description>
+    </item>
+    
+    <item>
+      <title>对手负担小的鼠标及微动研究</title>
+      <link>https://maitestarossa.github.io/post/cts-mouse-microswitch/</link>
+      <pubDate>Fri, 16 Jul 2021 11:41:09 +0800</pubDate>
+      
+      <guid>https://maitestarossa.github.io/post/cts-mouse-microswitch/</guid>
+      <description>序言 年轻时坐姿不正确，长期转椅斜侧身压迫手腕，导致患上了腕管综合征（鼠标手），虽然只要不过劳保持锻炼基本不会发作，但平时还是非常在意鼠标按键</description>
     </item>
     
     <item>

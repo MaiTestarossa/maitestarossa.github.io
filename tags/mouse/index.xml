@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mouse on Mai blog</title>
+    <link>https://maitestarossa.github.io/tags/mouse/</link>
+    <description>Recent content in mouse on Mai blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 16 Jul 2021 11:41:09 +0800</lastBuildDate><atom:link href="https://maitestarossa.github.io/tags/mouse/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>对手负担小的鼠标及微动研究</title>
+      <link>https://maitestarossa.github.io/post/cts-mouse-microswitch/</link>
+      <pubDate>Fri, 16 Jul 2021 11:41:09 +0800</pubDate>
+      
+      <guid>https://maitestarossa.github.io/post/cts-mouse-microswitch/</guid>
+      <description>序言 年轻时坐姿不正确，长期转椅斜侧身压迫手腕，导致患上了腕管综合征（鼠标手），虽然只要不过劳保持锻炼基本不会发作，但平时还是非常在意鼠标按键</description>
+    </item>
+    
+  </channel>
+</rss>

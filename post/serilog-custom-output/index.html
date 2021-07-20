@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Serilog RabbitMQ接收并按规则分类保存日志 - Mai blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Mai" /><meta name="description" content="Serilog有第三方提供一个RabbitMQ的sinks实现serilog-sinks-rabbitmq，接收后如何解析，并根据日志等级、" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.85.0 with theme even" />
+
+
+<link rel="canonical" href="https://maitestarossa.github.io/post/serilog-custom-output/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Serilog RabbitMQ接收并按规则分类保存日志" />
+<meta property="og:description" content="Serilog有第三方提供一个RabbitMQ的sinks实现serilog-sinks-rabbitmq，接收后如何解析，并根据日志等级、" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://maitestarossa.github.io/post/serilog-custom-output/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-07-20T14:54:02+08:00" />
+<meta property="article:modified_time" content="2021-07-20T14:54:02+08:00" />
+
+<meta itemprop="name" content="Serilog RabbitMQ接收并按规则分类保存日志">
+<meta itemprop="description" content="Serilog有第三方提供一个RabbitMQ的sinks实现serilog-sinks-rabbitmq，接收后如何解析，并根据日志等级、"><meta itemprop="datePublished" content="2021-07-20T14:54:02+08:00" />
+<meta itemprop="dateModified" content="2021-07-20T14:54:02+08:00" />
+<meta itemprop="wordCount" content="1893">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Serilog RabbitMQ接收并按规则分类保存日志"/>
+<meta name="twitter:description" content="Serilog有第三方提供一个RabbitMQ的sinks实现serilog-sinks-rabbitmq，接收后如何解析，并根据日志等级、"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Mai</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Mai</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Serilog RabbitMQ接收并按规则分类保存日志</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2021-07-20 </span>
+        <div class="post-category">
+            <a href="/categories/code/"> CODE </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#接收rabbitmq日志">接收RabbitMQ日志</a></li>
+    <li><a href="#解析logevent">解析LogEvent</a>
+      <ul>
+        <li><a href="#jsonformatter">JsonFormatter</a></li>
+        <li><a href="#解析">解析</a></li>
+        <li><a href="#接收端再额外添加properties">接收端再额外添加Properties</a></li>
+      </ul>
+    </li>
+    <li><a href="#按规则保存日志">按规则保存日志</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#按日志类型">按日志类型</a></li>
+            <li><a href="#按日志内包含的properties">按日志内包含的Properties</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>Serilog有第三方提供一个RabbitMQ的sinks实现<code>serilog-sinks-rabbitmq</code>，接收后如何解析，并根据日志等级、Properties内的变量分类保存是本文研究的内容。</p>
+<h1 id="接收rabbitmq日志">接收RabbitMQ日志</h1>
+<p>接收不是本文重点，留到以后更新，可以参考<a href="https://github.com/rsheasby">rsheasby</a>/<strong><a href="https://github.com/rsheasby/Serilog-RabbitMQ-Example">Serilog-RabbitMQ-Example</a></strong>,代码比较老。</p>
+<p>发送日志的sink<a href="https://github.com/steffenlyng">steffenlyng</a>/**<a href="https://github.com/steffenlyng/serilog-sinks-rabbitmq">serilog-sinks-rabbitmq</a>**现在作者更新到了<code>6.0.0</code>，但文档没更新，可以<code>3.0</code>的参考使用。</p>
+<p>这个库看上去作者已经没有动力更新并在寻找维护者，使用的时候踩坑只能靠自己了。实际上Serilog自己实现Sinks很简单，大可以利用作者的源码自己定制或贡献pr。</p>
+<h1 id="解析logevent">解析LogEvent</h1>
+<h2 id="jsonformatter">JsonFormatter</h2>
+<p>因为<code>Serilog.Formatting.Compact.Reader</code>只能适配json相关的Serilog formatter，因此发送端的日志必须定义格式为如<code>CompactJsonFormatter()</code>。</p>
+<p>这里有个问题，<code>CompactJsonFormatter</code>后期把timestamp改成了UTC时间的字符串保存，而发送过来的是json化后的<code>LogEvent</code>对象，<code>LogEvent</code>源码内<code>public DateTimeOffset Timestamp { get; }</code> Timestamp是无法Set的。</p>
+<p>这里有两个办法，粗暴点就重新新建一个<code>LogEvent</code>转换，这样做可以确保一致性，无论发送端是什么时区都能解析成固定时区。（实际上用现代化的日志分析器这不是问题，本文主要针对直接保存成文本的情况，不同时区会造成阅读困难）</p>
+<p>而GitHub上该Formatter相关Issues里的讨论，合适的做法是自定义一个Fomartter，因为Serilog的各种组件其实很简单，非常适合自己定制。这里我们把<code>CompactJsonFormatter</code>的源码复制下来，把Timestamp相关那行改成<code>output.Write(logEvent.Timestamp.ToString(&quot;O&quot;));</code>就能以本机时区保存时间字符串了。</p>
+<h2 id="解析">解析</h2>
+<p>解析很简单，引入<code>Serilog.Formatting.Compact.Reader</code>后，先将RabbitMQ接收到的内容转换成字符串，简单的使用<code>LogEventReader.ReadFromString(message);</code>就能转换成<code>LogEvent</code>格式。</p>
+<h2 id="接收端再额外添加properties">接收端再额外添加Properties</h2>
+<p>给日志添加额外信息，如记录接收时的时间，示例代码如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="kt">var</span> <span class="n">evt</span> <span class="p">=</span> <span class="n">LogEventReader</span><span class="p">.</span><span class="n">ReadFromString</span><span class="p">(</span><span class="n">message</span><span class="p">);</span>
+<span class="n">evt</span><span class="p">.</span><span class="n">AddPropertyIfAbsent</span><span class="p">(</span><span class="k">new</span> <span class="n">LogEventProperty</span><span class="p">(</span><span class="s">&#34;Date&#34;</span><span class="p">,</span> <span class="k">new</span> <span class="n">ScalarValue</span><span class="p">(</span><span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">)));</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>添加的时候需要添加<code>ScalarValue</code>，因为Serilog的Property只有4种基础类型，<code>ScalarValue</code> <code>SqeuenceValue</code> <code>DictionaryValue</code> <code>StructValue</code> ，需要转换成对应类型，关于基础类型的解释，可以参考其他文章，这里暂不讨论，待更新。</p>
+<h1 id="按规则保存日志">按规则保存日志</h1>
+<h3 id="按日志类型">按日志类型</h3>
+<p>首先按日志类型过滤后保存，可以用如下代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="k">new</span> <span class="n">LoggerConfiguration</span>
+       <span class="c1">// WARNING ERROR FATAL
+</span><span class="c1"></span>        <span class="p">.</span><span class="n">WriteTo</span><span class="p">.</span><span class="n">Logger</span><span class="p">(</span><span class="n">lc</span> <span class="p">=&gt;</span> <span class="n">lc</span>
+          <span class="p">.</span><span class="n">Filter</span><span class="p">.</span><span class="n">ByIncludingOnly</span><span class="p">(</span><span class="n">le</span> <span class="p">=&gt;</span>
+             <span class="n">le</span><span class="p">.</span><span class="n">Level</span> <span class="k">is</span> <span class="n">LogEventLevel</span><span class="p">.</span><span class="n">Warning</span> <span class="n">or</span> <span class="n">LogEventLevel</span><span class="p">.</span><span class="n">Error</span> <span class="n">or</span> <span class="n">LogEventLevel</span><span class="p">.</span><span class="n">Fatal</span><span class="p">)</span>
+          <span class="p">.</span><span class="n">WriteTo</span><span class="p">.</span><span class="n">Console</span><span class="p">()</span>
+       <span class="c1">// Info
+</span><span class="c1"></span>        <span class="p">.</span><span class="n">WriteTo</span><span class="p">.</span><span class="n">Logger</span><span class="p">(</span><span class="n">lc</span> <span class="p">=&gt;</span> <span class="n">lc</span>
+          <span class="p">.</span><span class="n">Filter</span><span class="p">.</span><span class="n">ByIncludingOnly</span><span class="p">(</span><span class="n">le</span> <span class="p">=&gt;</span>
+             <span class="n">le</span><span class="p">.</span><span class="n">Level</span> <span class="k">is</span> <span class="n">LogEventLevel</span><span class="p">.</span><span class="n">Information</span><span class="p">)</span>
+          <span class="p">.</span><span class="n">WriteTo</span><span class="p">.</span><span class="n">Console</span><span class="p">()</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>还有其他可以指定日志等级的有<code>restrictedToMinimumLevel</code>和<code>levelSwitch</code>，但这2个都是指定最低等级，比如是Information的话就会记录Info、Warn、Error、Fatal，不如<code>.Filter.ByIncludingOnly</code>灵活。</p>
+<h3 id="按日志内包含的properties">按日志内包含的Properties</h3>
+<p>按日志中的Properties规则保存，则需要用到<code>Serilog.Sinks.Map</code>，但Map一般只适合单个Propertity，多个的话会很难看，且不知道能不能以asppsetting.json的config形式配置。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#">	<span class="p">.</span><span class="n">WriteTo</span><span class="p">.</span><span class="n">Map</span><span class="p">(</span><span class="s">&#34;ClientName&#34;</span><span class="p">,</span> <span class="s">&#34;defaultClientName&#34;</span><span class="p">,</span>
+    <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">wt</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="n">wt</span><span class="p">.</span><span class="n">File</span><span class="p">(</span><span class="s">$&#34;/logs/Info/{name}-.txt&#34;</span><span class="p">,</span><span class="n">outputTemplate</span><span class="p">:</span> <span class="n">outTemplate</span><span class="p">,</span> <span class="n">rollingInterval</span><span class="p">:</span> <span class="n">RollingInterval</span><span class="p">.</span><span class="n">Day</span><span class="p">,</span>
+        <span class="n">fileSizeLimitBytes</span><span class="p">:</span> <span class="m">1024</span> <span class="p">*</span> <span class="m">1024</span> <span class="p">*</span> <span class="m">10</span><span class="p">)))</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>上面这段结合按日志类型过滤后，就能以日志中的ClientName为文件名记录滚动日志，文件名后缀会带上日期到天，且超过10MByte就新建日志。</p>
+<p>读取多个属性，我参考了Map内的源码后直接处理<code>LogEvent</code>，获取Properties的代码直接复制了Map的实现，这样实现了日志文件名既带LogLevel又带自己配置的ClientName。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#">    <span class="p">.</span><span class="n">WriteTo</span><span class="p">.</span><span class="n">Map</span><span class="p">(</span><span class="n">evt</span> <span class="p">=&gt;</span> <span class="n">evt</span><span class="p">,</span>
+        <span class="p">(</span><span class="n">evt</span><span class="p">,</span> <span class="n">wt</span><span class="p">)</span> <span class="p">=&gt;</span>
+        <span class="p">{</span>
+            <span class="kt">var</span> <span class="n">ClientName</span> <span class="p">=</span>
+                <span class="p">(</span><span class="n">evt</span><span class="p">.</span><span class="n">Properties</span><span class="p">.</span><span class="n">TryGetValue</span><span class="p">(</span><span class="s">&#34;ClientName&#34;</span><span class="p">,</span> <span class="k">out</span> <span class="kt">var</span> <span class="n">eventPropertyValue</span><span class="p">)</span> <span class="p">&amp;&amp;</span>
+                 <span class="n">eventPropertyValue</span> <span class="k">is</span> <span class="n">ScalarValue</span> <span class="n">scalarValue</span>
+                    <span class="p">?</span> <span class="n">scalarValue</span><span class="p">.</span><span class="n">Value</span><span class="p">?.</span><span class="n">ToString</span><span class="p">()</span> <span class="p">??</span> <span class="s">&#34;defaultSiteName&#34;</span>
+                    <span class="p">:</span> <span class="s">&#34;defaultSiteName&#34;</span><span class="p">);</span>
+            <span class="n">wt</span><span class="p">.</span><span class="n">File</span><span class="p">(</span>
+                <span class="s">$&#34;/logs/Error/{ClientName}-{evt.Level}-.txt&#34;</span><span class="p">,</span><span class="n">outputTemplate</span><span class="p">:</span> <span class="n">outTemplate</span><span class="p">,</span>
+                <span class="n">rollingInterval</span><span class="p">:</span> <span class="n">RollingInterval</span><span class="p">.</span><span class="n">Day</span><span class="p">,</span>
+                <span class="n">fileSizeLimitBytes</span><span class="p">:</span> <span class="m">1024</span> <span class="p">*</span> <span class="m">1024</span> <span class="p">*</span> <span class="m">10</span><span class="p">);</span>
+        <span class="p">}))</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>总结这样写其实还是很麻烦，如果规则变多，代码会变得很长。但各种组件适配灵活，自己从源码实现功能方便，这是Serilog的优势。</p>
+<p>如果是NLog，可以使用<code>MappedDiagnosticsLogicalContext.SetScoped(items)</code>并在配置文件中<code>${mdlc:item=LogType}</code>，反而会少写不少重复代码。</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">Mai</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2021-07-20
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/cts-mouse-microswitch/">
+            <span class="next-text nav-default">对手负担小的鼠标及微动研究</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+            repo="MaiTestarossa/maitestarossa.github.io"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+  <a href="https://maitestarossa.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>Mai</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -49,7 +49,7 @@
 <meta itemprop="name" content="Serilog RabbitMQ接收并按规则分类保存日志">
 <meta itemprop="description" content="Serilog有第三方提供一个RabbitMQ的sinks实现serilog-sinks-rabbitmq，接收后如何解析，并根据日志等级、"><meta itemprop="datePublished" content="2021-07-20T14:54:02+08:00" />
 <meta itemprop="dateModified" content="2021-07-20T14:54:02+08:00" />
-<meta itemprop="wordCount" content="1893">
+<meta itemprop="wordCount" content="1856">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Serilog RabbitMQ接收并按规则分类保存日志"/>
 <meta name="twitter:description" content="Serilog有第三方提供一个RabbitMQ的sinks实现serilog-sinks-rabbitmq，接收后如何解析，并根据日志等级、"/>
@@ -171,7 +171,7 @@
       <p>Serilog有第三方提供一个RabbitMQ的sinks实现<code>serilog-sinks-rabbitmq</code>，接收后如何解析，并根据日志等级、Properties内的变量分类保存是本文研究的内容。</p>
 <h1 id="接收rabbitmq日志">接收RabbitMQ日志</h1>
 <p>接收不是本文重点，留到以后更新，可以参考<a href="https://github.com/rsheasby">rsheasby</a>/<strong><a href="https://github.com/rsheasby/Serilog-RabbitMQ-Example">Serilog-RabbitMQ-Example</a></strong>,代码比较老。</p>
-<p>发送日志的sink<a href="https://github.com/steffenlyng">steffenlyng</a>/**<a href="https://github.com/steffenlyng/serilog-sinks-rabbitmq">serilog-sinks-rabbitmq</a>**现在作者更新到了<code>6.0.0</code>，但文档没更新，可以<code>3.0</code>的参考使用。</p>
+<p>发送日志的sink <a href="https://github.com/steffenlyng">steffenlyng</a>/<strong><a href="https://github.com/steffenlyng/serilog-sinks-rabbitmq">serilog-sinks-rabbitmq</a></strong> 现在作者更新到了<code>6.0.0</code>，但文档没更新，可以<code>3.0</code>的参考使用。</p>
 <p>这个库看上去作者已经没有动力更新并在寻找维护者，使用的时候踩坑只能靠自己了。实际上Serilog自己实现Sinks很简单，大可以利用作者的源码自己定制或贡献pr。</p>
 <h1 id="解析logevent">解析LogEvent</h1>
 <h2 id="jsonformatter">JsonFormatter</h2>

@@ -49,7 +49,7 @@
 <meta itemprop="name" content="Serilog RabbitMQ接收并按规则分类保存日志">
 <meta itemprop="description" content="Serilog有第三方提供一个RabbitMQ的sinks实现serilog-sinks-rabbitmq，接收后如何解析，并根据日志等级、"><meta itemprop="datePublished" content="2021-07-20T14:54:02+08:00" />
 <meta itemprop="dateModified" content="2021-07-20T14:54:02+08:00" />
-<meta itemprop="wordCount" content="1856">
+<meta itemprop="wordCount" content="1925">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Serilog RabbitMQ接收并按规则分类保存日志"/>
 <meta name="twitter:description" content="Serilog有第三方提供一个RabbitMQ的sinks实现serilog-sinks-rabbitmq，接收后如何解析，并根据日志等级、"/>
@@ -244,37 +244,28 @@
 <p>读取多个属性，我参考了Map内的源码后直接处理<code>LogEvent</code>，获取Properties的代码直接复制了Map的实现，这样实现了日志文件名既带LogLevel又带自己配置的ClientName。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-C#" data-lang="C#">    <span class="p">.</span><span class="n">WriteTo</span><span class="p">.</span><span class="n">Map</span><span class="p">(</span><span class="n">evt</span> <span class="p">=&gt;</span> <span class="n">evt</span><span class="p">,</span>
-        <span class="p">(</span><span class="n">evt</span><span class="p">,</span> <span class="n">wt</span><span class="p">)</span> <span class="p">=&gt;</span>
+<pre class="chroma"><code class="language-C#" data-lang="C#">    <span class="p">.</span><span class="n">WriteTo</span><span class="p">.</span><span class="n">Map</span><span class="p">(</span><span class="n">evt</span> <span class="p">=&gt;</span> <span class="p">(</span><span class="n">evt</span><span class="p">.</span><span class="n">Level</span><span class="p">,</span> <span class="n">evt</span><span class="p">.</span><span class="n">Properties</span><span class="p">.</span><span class="n">TryGetValue</span><span class="p">(</span><span class="n">SiteName</span><span class="p">,</span> <span class="k">out</span> <span class="kt">var</span> <span class="n">eventPropertyValue</span><span class="p">)</span> <span class="p">&amp;&amp;</span> <span class="n">eventPropertyValue</span> <span class="k">is</span> <span class="n">ScalarValue</span> <span class="n">scalarValue</span> <span class="p">?</span> <span class="n">scalarValue</span><span class="p">.</span><span class="n">Value</span><span class="p">?.</span><span class="n">ToString</span><span class="p">()</span> <span class="p">??</span> <span class="n">defaultSiteName</span> <span class="p">:</span> <span class="n">defaultSiteName</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">tuple</span><span class="p">,</span> <span class="n">wt</span><span class="p">)</span> <span class="p">=&gt;</span>
         <span class="p">{</span>
-            <span class="kt">var</span> <span class="n">ClientName</span> <span class="p">=</span>
-                <span class="p">(</span><span class="n">evt</span><span class="p">.</span><span class="n">Properties</span><span class="p">.</span><span class="n">TryGetValue</span><span class="p">(</span><span class="s">&#34;ClientName&#34;</span><span class="p">,</span> <span class="k">out</span> <span class="kt">var</span> <span class="n">eventPropertyValue</span><span class="p">)</span> <span class="p">&amp;&amp;</span>
-                 <span class="n">eventPropertyValue</span> <span class="k">is</span> <span class="n">ScalarValue</span> <span class="n">scalarValue</span>
-                    <span class="p">?</span> <span class="n">scalarValue</span><span class="p">.</span><span class="n">Value</span><span class="p">?.</span><span class="n">ToString</span><span class="p">()</span> <span class="p">??</span> <span class="s">&#34;defaultSiteName&#34;</span>
-                    <span class="p">:</span> <span class="s">&#34;defaultSiteName&#34;</span><span class="p">);</span>
             <span class="n">wt</span><span class="p">.</span><span class="n">File</span><span class="p">(</span>
-                <span class="s">$&#34;/logs/Error/{ClientName}-{evt.Level}-.txt&#34;</span><span class="p">,</span><span class="n">outputTemplate</span><span class="p">:</span> <span class="n">outTemplate</span><span class="p">,</span>
+                <span class="s">$&#34;/logs/Error/{tuple.Item2}-{tuple.Level}-.txt&#34;</span><span class="p">,</span><span class="n">outputTemplate</span><span class="p">:</span> <span class="n">outTemplate</span><span class="p">,</span>
                 <span class="n">rollingInterval</span><span class="p">:</span> <span class="n">RollingInterval</span><span class="p">.</span><span class="n">Day</span><span class="p">,</span>
                 <span class="n">fileSizeLimitBytes</span><span class="p">:</span> <span class="m">1024</span> <span class="p">*</span> <span class="m">1024</span> <span class="p">*</span> <span class="m">10</span><span class="p">);</span>
         <span class="p">}))</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>总结这样写其实还是很麻烦，如果规则变多，代码会变得很长。但各种组件适配灵活，自己从源码实现功能方便，这是Serilog的优势。</p>
+</div><p>Map使用限制还是很大，如果想要传入多个参数，似乎不能直接传<code>LogEvent</code>到输出模板，实验多次后发现会无法写入日志，必须像上面那样包装成Tuple形式。</p>
+<p>总结这样写其实还是很麻烦，如果规则变多，代码会变得很长。但各种组件适配灵活，自己从源码实现功能方便，这是Serilog的优势。</p>
 <p>如果是NLog，可以使用<code>MappedDiagnosticsLogicalContext.SetScoped(items)</code>并在配置文件中<code>${mdlc:item=LogType}</code>，反而会少写不少重复代码。</p>
 
     </div>

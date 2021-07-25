@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LIFE on Mai blog</title>
+    <link>https://maitestarossa.github.io/categories/life/</link>
+    <description>Recent content in LIFE on Mai blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 25 Jul 2021 18:39:16 +0800</lastBuildDate><atom:link href="https://maitestarossa.github.io/categories/life/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>小米系等互联网家电产品踩坑、维修</title>
+      <link>https://maitestarossa.github.io/post/mi-eco-products/</link>
+      <pubDate>Sun, 25 Jul 2021 18:39:16 +0800</pubDate>
+      
+      <guid>https://maitestarossa.github.io/post/mi-eco-products/</guid>
+      <description>这些年买的小米生态系的家电产品，无一不过保就坏，外观好看功能实用，但设计上普遍存在致命缺陷寿命短是这类产品的特色。 过保坏还不是最大问题，买不</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dotnet on Mai blog</title>
+    <link>https://maitestarossa.github.io/tags/dotnet/</link>
+    <description>Recent content in dotnet on Mai blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 13 Aug 2021 01:49:13 +0800</lastBuildDate><atom:link href="https://maitestarossa.github.io/tags/dotnet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ASP.NET Core基于cookie的登录超时研究和防止自动刷新过期时间</title>
+      <link>https://maitestarossa.github.io/post/aspnetcore-login-expire-time/</link>
+      <pubDate>Fri, 13 Aug 2021 01:49:13 +0800</pubDate>
+      
+      <guid>https://maitestarossa.github.io/post/aspnetcore-login-expire-time/</guid>
+      <description>本文基于ASP.NET Core 5。 关于基于cookie的登录验证，可以参考官方文章 Use cookie authentication without ASP.NET Core Identity。 超时相关设置，主要涉及Startu</description>
+    </item>
+    
+    <item>
+      <title>Serilog RabbitMQ接收并按规则分类保存日志</title>
+      <link>https://maitestarossa.github.io/post/serilog-custom-output/</link>
+      <pubDate>Tue, 20 Jul 2021 14:54:02 +0800</pubDate>
+      
+      <guid>https://maitestarossa.github.io/post/serilog-custom-output/</guid>
+      <description>Serilog有第三方提供一个RabbitMQ的sinks实现serilog-sinks-rabbitmq，接收后如何解析，并根据日志等级、</description>
+    </item>
+    
+    <item>
+      <title>StackExchange.Redis timeout 问题研究</title>
+      <link>https://maitestarossa.github.io/post/se-redis-timeout/</link>
+      <pubDate>Wed, 07 Jul 2021 19:41:42 +0900</pubDate>
+      
+      <guid>https://maitestarossa.github.io/post/se-redis-timeout/</guid>
+      <description>.net下最常用的redis库StackExchange.Redistimeout问题似乎是个老生常谈的问题，不管是framework还是c</description>
+    </item>
+    
+  </channel>
+</rss>

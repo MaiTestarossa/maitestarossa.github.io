@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>redis on Mai blog</title>
+    <link>https://maitestarossa.github.io/tags/redis/</link>
+    <description>Recent content in redis on Mai blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 07 Jul 2021 19:41:42 +0900</lastBuildDate><atom:link href="https://maitestarossa.github.io/tags/redis/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>StackExchange.Redis timeout 问题研究</title>
+      <link>https://maitestarossa.github.io/post/se-redis-timeout/</link>
+      <pubDate>Wed, 07 Jul 2021 19:41:42 +0900</pubDate>
+      
+      <guid>https://maitestarossa.github.io/post/se-redis-timeout/</guid>
+      <description>.net下最常用的redis库StackExchange.Redistimeout问题似乎是个老生常谈的问题，不管是framework还是c</description>
+    </item>
+    
+  </channel>
+</rss>

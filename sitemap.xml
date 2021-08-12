@@ -16,6 +16,13 @@
   </url>
   
   <url>
+    <loc>https://maitestarossa.github.io/tags/aspnetcore/</loc>
+    <lastmod>2021-08-13T01:49:13+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://maitestarossa.github.io/categories/</loc>
     <lastmod>2021-08-13T01:49:13+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -24,6 +31,13 @@
   
   <url>
     <loc>https://maitestarossa.github.io/categories/code/</loc>
+    <lastmod>2021-08-13T01:49:13+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/tags/dotnet/</loc>
     <lastmod>2021-08-13T01:49:13+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -45,7 +59,7 @@
   
   <url>
     <loc>https://maitestarossa.github.io/tags/</loc>
-    <lastmod>2021-08-02T01:38:31+08:00</lastmod>
+    <lastmod>2021-08-13T01:49:13+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -123,6 +137,20 @@
   <url>
     <loc>https://maitestarossa.github.io/tags/%E7%BB%B4%E4%BF%AE/</loc>
     <lastmod>2021-07-25T18:39:16+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/tags/rabbitmq/</loc>
+    <lastmod>2021-07-20T14:54:02+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/tags/serilog/</loc>
+    <lastmod>2021-07-20T14:54:02+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -207,6 +235,13 @@
   <url>
     <loc>https://maitestarossa.github.io/post/firefox-chromecss-with-tst/</loc>
     <lastmod>2021-07-10T19:50:38+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/tags/redis/</loc>
+    <lastmod>2021-07-07T19:41:42+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

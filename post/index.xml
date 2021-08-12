@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Mai blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 02 Aug 2021 01:38:31 +0800</lastBuildDate><atom:link href="https://maitestarossa.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 13 Aug 2021 01:49:13 +0800</lastBuildDate><atom:link href="https://maitestarossa.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ASP.NET Core基于cookie的登录超时研究和防止自动刷新过期时间</title>
+      <link>https://maitestarossa.github.io/post/aspnetcore-login-expire-time/</link>
+      <pubDate>Fri, 13 Aug 2021 01:49:13 +0800</pubDate>
+      
+      <guid>https://maitestarossa.github.io/post/aspnetcore-login-expire-time/</guid>
+      <description>本文基于ASP.NET Core 5。 关于基于cookie的登录验证，可以参考官方文章 Use cookie authentication without ASP.NET Core Identity。 超时相关设置，主要涉及Startu</description>
+    </item>
+    
     <item>
       <title>家用手动工具挑选购买</title>
       <link>https://maitestarossa.github.io/post/hand-tools/</link>

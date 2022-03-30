@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.85.0 with theme even" />
+<meta name="generator" content="Hugo 0.96.0 with theme even" />
 
 
 <link rel="canonical" href="https://maitestarossa.github.io/post/aspnetcore-login-expire-time/" />
@@ -49,7 +49,7 @@
 <meta itemprop="name" content="ASP.NET Core基于cookie的登录超时研究和防止自动刷新过期时间">
 <meta itemprop="description" content="本文基于ASP.NET Core 5。 关于基于cookie的登录验证，可以参考官方文章 Use cookie authentication without ASP.NET Core Identity。 超时相关设置，主要涉及Startu"><meta itemprop="datePublished" content="2021-08-13T01:49:13+08:00" />
 <meta itemprop="dateModified" content="2021-08-13T01:49:13+08:00" />
-<meta itemprop="wordCount" content="1499">
+<meta itemprop="wordCount" content="1498">
 <meta itemprop="keywords" content="dotnet,aspnetcore," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="ASP.NET Core基于cookie的登录超时研究和防止自动刷新过期时间"/>
 <meta name="twitter:description" content="本文基于ASP.NET Core 5。 关于基于cookie的登录验证，可以参考官方文章 Use cookie authentication without ASP.NET Core Identity。 超时相关设置，主要涉及Startu"/>
@@ -136,7 +136,7 @@
         <div class="post-category">
             <a href="/categories/code/"> CODE </a>
             </div>
-          <span class="more-meta"> 约 1499 字 </span>
+          <span class="more-meta"> 约 1498 字 </span>
           <span class="more-meta"> 预计阅读 3 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -167,7 +167,7 @@
 <p>默认情况下<code>AuthenticationProperties</code>配置<code>IsPersistent = true</code>和<code>ExpiresUtc = DateTime.UtcNow.AddMinutes(20)</code>的话（也就是“记住我”的选项），登录后会生成一个到期时间为20分钟后的cookie，代码如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -177,21 +177,21 @@
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-c#" data-lang="c#"><span class="k">await</span> <span class="n">HttpContext</span><span class="p">.</span><span class="n">SignInAsync</span><span class="p">(</span>
-    <span class="n">CookieAuthenticationDefaults</span><span class="p">.</span><span class="n">AuthenticationScheme</span><span class="p">,</span>
-    <span class="k">new</span> <span class="n">ClaimsPrincipal</span><span class="p">(</span><span class="n">claimsIdentity</span><span class="p">),</span>
-    <span class="k">new</span> <span class="n">AuthenticationProperties</span>
-    <span class="p">{</span>
-        <span class="n">IsPersistent</span> <span class="p">=</span> <span class="k">true</span><span class="p">,</span>
-        <span class="n">ExpiresUtc</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">UtcNow</span><span class="p">.</span><span class="n">AddMinutes</span><span class="p">(</span><span class="m">20</span><span class="p">)</span>
-    <span class="p">});</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-c#" data-lang="c#"><span class="line"><span class="cl"><span class="k">await</span> <span class="n">HttpContext</span><span class="p">.</span><span class="n">SignInAsync</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">CookieAuthenticationDefaults</span><span class="p">.</span><span class="n">AuthenticationScheme</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="k">new</span> <span class="n">ClaimsPrincipal</span><span class="p">(</span><span class="n">claimsIdentity</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="k">new</span> <span class="n">AuthenticationProperties</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">IsPersistent</span> <span class="p">=</span> <span class="k">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ExpiresUtc</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">UtcNow</span><span class="p">.</span><span class="n">AddMinutes</span><span class="p">(</span><span class="m">20</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>这样配置后，到10分钟后你再刷新页面，cookie的过期时间会延长。这样的默认配置可以提高体验，也符合一般情况，但如果业务上有保密要求等较为严格的过期情况怎么办？</p>
 <p>答案有两种，一是在<code>Startup</code>内的<code>.AddCookie</code>配置<code>SlidingExpiration</code>，或者<code>HttpContext.SignInAsync</code>内的<code>AuthenticationProperties</code>配置<code>AllowRefresh</code>，具体代码如下</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -208,28 +208,26 @@
 </span><span class="lnt">15
 </span><span class="lnt">16
 </span><span class="lnt">17
-</span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-c#" data-lang="c#"><span class="c1">// Startup.cs
-</span><span class="c1"></span><span class="n">services</span><span class="p">.</span><span class="n">AddAuthentication</span><span class="p">(</span><span class="n">CookieAuthenticationDefaults</span><span class="p">.</span><span class="n">AuthenticationScheme</span><span class="p">)</span>
-                <span class="p">.</span><span class="n">AddCookie</span><span class="p">(</span><span class="n">options</span> <span class="p">=&gt;</span>
-                <span class="p">{</span>
-                    <span class="n">options</span><span class="p">.</span><span class="n">SlidingExpiration</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
-                <span class="p">});</span>
-
-<span class="c1">// Login 
-</span><span class="c1"></span><span class="k">await</span> <span class="n">HttpContext</span><span class="p">.</span><span class="n">SignInAsync</span><span class="p">(</span>
-    <span class="n">CookieAuthenticationDefaults</span><span class="p">.</span><span class="n">AuthenticationScheme</span><span class="p">,</span>
-    <span class="k">new</span> <span class="n">ClaimsPrincipal</span><span class="p">(</span><span class="n">claimsIdentity</span><span class="p">),</span>
-    <span class="k">new</span> <span class="n">AuthenticationProperties</span>
-    <span class="p">{</span>
-        <span class="n">IsPersistent</span> <span class="p">=</span> <span class="k">true</span><span class="p">,</span>
-        <span class="n">ExpiresUtc</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">UtcNow</span><span class="p">.</span><span class="n">AddMinutes</span><span class="p">(</span><span class="m">20</span><span class="p">),</span>
-        <span class="n">AllowRefresh</span> <span class="p">=</span> <span class="k">false</span>
-    <span class="p">});</span>
-
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-c#" data-lang="c#"><span class="line"><span class="cl"><span class="c1">// Startup.cs</span>
+</span></span><span class="line"><span class="cl"><span class="n">services</span><span class="p">.</span><span class="n">AddAuthentication</span><span class="p">(</span><span class="n">CookieAuthenticationDefaults</span><span class="p">.</span><span class="n">AuthenticationScheme</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="p">.</span><span class="n">AddCookie</span><span class="p">(</span><span class="n">options</span> <span class="p">=&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">options</span><span class="p">.</span><span class="n">SlidingExpiration</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Login </span>
+</span></span><span class="line"><span class="cl"><span class="k">await</span> <span class="n">HttpContext</span><span class="p">.</span><span class="n">SignInAsync</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">CookieAuthenticationDefaults</span><span class="p">.</span><span class="n">AuthenticationScheme</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="k">new</span> <span class="n">ClaimsPrincipal</span><span class="p">(</span><span class="n">claimsIdentity</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="k">new</span> <span class="n">AuthenticationProperties</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">IsPersistent</span> <span class="p">=</span> <span class="k">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ExpiresUtc</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">UtcNow</span><span class="p">.</span><span class="n">AddMinutes</span><span class="p">(</span><span class="m">20</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">        <span class="n">AllowRefresh</span> <span class="p">=</span> <span class="k">false</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>两者选一个就可以了，后者<code>AllowRefresh</code>会覆盖前者的设置。这样就不会自动刷新延长cookie过期时间了。这里主要是<code>SlidingExpiration</code>起了刷新作用，通过微软文档我们可以明白它的意思：</p>
 <blockquote>
@@ -240,7 +238,7 @@
 <p><a href="https://github.com/dotnet/aspnetcore/blob/8b30d862de6c9146f466061d51aa3f1414ee2337/src/Security/Authentication/Cookies/src/CookieAuthenticationHandler.cs">CookieAuthenticationHandler.cs</a>该文件下写明了关系，代码片段如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -265,30 +263,30 @@
 </span><span class="lnt">23
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-c#" data-lang="c#">        <span class="k">private</span> <span class="k">async</span> <span class="n">Task</span> <span class="n">CheckForRefreshAsync</span><span class="p">(</span><span class="n">AuthenticationTicket</span> <span class="n">ticket</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="kt">var</span> <span class="n">currentUtc</span> <span class="p">=</span> <span class="n">Clock</span><span class="p">.</span><span class="n">UtcNow</span><span class="p">;</span>
-            <span class="kt">var</span> <span class="n">issuedUtc</span> <span class="p">=</span> <span class="n">ticket</span><span class="p">.</span><span class="n">Properties</span><span class="p">.</span><span class="n">IssuedUtc</span><span class="p">;</span>
-            <span class="kt">var</span> <span class="n">expiresUtc</span> <span class="p">=</span> <span class="n">ticket</span><span class="p">.</span><span class="n">Properties</span><span class="p">.</span><span class="n">ExpiresUtc</span><span class="p">;</span>
-            <span class="kt">var</span> <span class="n">allowRefresh</span> <span class="p">=</span> <span class="n">ticket</span><span class="p">.</span><span class="n">Properties</span><span class="p">.</span><span class="n">AllowRefresh</span> <span class="p">??</span> <span class="k">true</span><span class="p">;</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">issuedUtc</span> <span class="p">!=</span> <span class="k">null</span> <span class="p">&amp;&amp;</span> <span class="n">expiresUtc</span> <span class="p">!=</span> <span class="k">null</span> <span class="p">&amp;&amp;</span> <span class="n">Options</span><span class="p">.</span><span class="n">SlidingExpiration</span> <span class="p">&amp;&amp;</span> <span class="n">allowRefresh</span><span class="p">)</span>
-            <span class="p">{</span>
-                <span class="kt">var</span> <span class="n">timeElapsed</span> <span class="p">=</span> <span class="n">currentUtc</span><span class="p">.</span><span class="n">Subtract</span><span class="p">(</span><span class="n">issuedUtc</span><span class="p">.</span><span class="n">Value</span><span class="p">);</span>
-                <span class="kt">var</span> <span class="n">timeRemaining</span> <span class="p">=</span> <span class="n">expiresUtc</span><span class="p">.</span><span class="n">Value</span><span class="p">.</span><span class="n">Subtract</span><span class="p">(</span><span class="n">currentUtc</span><span class="p">);</span>
-
-                <span class="kt">var</span> <span class="n">eventContext</span> <span class="p">=</span> <span class="k">new</span> <span class="n">CookieSlidingExpirationContext</span><span class="p">(</span><span class="n">Context</span><span class="p">,</span> <span class="n">Scheme</span><span class="p">,</span> <span class="n">Options</span><span class="p">,</span> <span class="n">ticket</span><span class="p">,</span> <span class="n">timeElapsed</span><span class="p">,</span> <span class="n">timeRemaining</span><span class="p">)</span>
-                <span class="p">{</span>
-                    <span class="n">ShouldRenew</span> <span class="p">=</span> <span class="n">timeRemaining</span> <span class="p">&lt;</span> <span class="n">timeElapsed</span><span class="p">,</span>
-                <span class="p">};</span>
-                <span class="k">await</span> <span class="n">Options</span><span class="p">.</span><span class="n">Events</span><span class="p">.</span><span class="n">OnCheckSlidingExpiration</span><span class="p">(</span><span class="n">eventContext</span><span class="p">);</span>
-
-                <span class="k">if</span> <span class="p">(</span><span class="n">eventContext</span><span class="p">.</span><span class="n">ShouldRenew</span><span class="p">)</span>
-                <span class="p">{</span>
-                    <span class="n">RequestRefresh</span><span class="p">(</span><span class="n">ticket</span><span class="p">);</span>
-                <span class="p">}</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-c#" data-lang="c#"><span class="line"><span class="cl">        <span class="k">private</span> <span class="k">async</span> <span class="n">Task</span> <span class="n">CheckForRefreshAsync</span><span class="p">(</span><span class="n">AuthenticationTicket</span> <span class="n">ticket</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="kt">var</span> <span class="n">currentUtc</span> <span class="p">=</span> <span class="n">Clock</span><span class="p">.</span><span class="n">UtcNow</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="kt">var</span> <span class="n">issuedUtc</span> <span class="p">=</span> <span class="n">ticket</span><span class="p">.</span><span class="n">Properties</span><span class="p">.</span><span class="n">IssuedUtc</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="kt">var</span> <span class="n">expiresUtc</span> <span class="p">=</span> <span class="n">ticket</span><span class="p">.</span><span class="n">Properties</span><span class="p">.</span><span class="n">ExpiresUtc</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="kt">var</span> <span class="n">allowRefresh</span> <span class="p">=</span> <span class="n">ticket</span><span class="p">.</span><span class="n">Properties</span><span class="p">.</span><span class="n">AllowRefresh</span> <span class="p">??</span> <span class="k">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">issuedUtc</span> <span class="p">!=</span> <span class="k">null</span> <span class="p">&amp;&amp;</span> <span class="n">expiresUtc</span> <span class="p">!=</span> <span class="k">null</span> <span class="p">&amp;&amp;</span> <span class="n">Options</span><span class="p">.</span><span class="n">SlidingExpiration</span> <span class="p">&amp;&amp;</span> <span class="n">allowRefresh</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="kt">var</span> <span class="n">timeElapsed</span> <span class="p">=</span> <span class="n">currentUtc</span><span class="p">.</span><span class="n">Subtract</span><span class="p">(</span><span class="n">issuedUtc</span><span class="p">.</span><span class="n">Value</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="kt">var</span> <span class="n">timeRemaining</span> <span class="p">=</span> <span class="n">expiresUtc</span><span class="p">.</span><span class="n">Value</span><span class="p">.</span><span class="n">Subtract</span><span class="p">(</span><span class="n">currentUtc</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                <span class="kt">var</span> <span class="n">eventContext</span> <span class="p">=</span> <span class="k">new</span> <span class="n">CookieSlidingExpirationContext</span><span class="p">(</span><span class="n">Context</span><span class="p">,</span> <span class="n">Scheme</span><span class="p">,</span> <span class="n">Options</span><span class="p">,</span> <span class="n">ticket</span><span class="p">,</span> <span class="n">timeElapsed</span><span class="p">,</span> <span class="n">timeRemaining</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">ShouldRenew</span> <span class="p">=</span> <span class="n">timeRemaining</span> <span class="p">&lt;</span> <span class="n">timeElapsed</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="p">};</span>
+</span></span><span class="line"><span class="cl">                <span class="k">await</span> <span class="n">Options</span><span class="p">.</span><span class="n">Events</span><span class="p">.</span><span class="n">OnCheckSlidingExpiration</span><span class="p">(</span><span class="n">eventContext</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="p">(</span><span class="n">eventContext</span><span class="p">.</span><span class="n">ShouldRenew</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">RequestRefresh</span><span class="p">(</span><span class="n">ticket</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>只有在同时满足<code>AllowRefresh</code>和<code>SlidingExpiration</code>为<code>true</code>且cookie没有过期的前提下，才会自动刷新cookie时间。</p>
 <p>文档里没找到默认值相关内容，理论上两者默认值应该是都<code>true</code>，因为发现这个问题是在没配置上述参数的情况下发现的。</p>
@@ -296,7 +294,7 @@
 <p>如果我们想让用户在没有选择“记住我”的情况下，靠session保持登录状态，但在3分钟没有活动的情况下自动注销，需要用如下代码：（来自stackoverflow<a href="https://stackoverflow.com/questions/52025491/logout-user-after-inactivity-in-asp-net-core">Logout user after inactivity in asp.net core</a>）</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -304,13 +302,13 @@
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-c#" data-lang="c#">            <span class="n">services</span><span class="p">.</span><span class="n">AddAuthentication</span><span class="p">(</span><span class="n">CookieAuthenticationDefaults</span><span class="p">.</span><span class="n">AuthenticationScheme</span><span class="p">)</span>
-                <span class="p">.</span><span class="n">AddCookie</span><span class="p">(</span><span class="n">options</span> <span class="p">=&gt;</span>
-                <span class="p">{</span>
-                    <span class="n">options</span><span class="p">.</span><span class="n">ExpireTimeSpan</span> <span class="p">=</span> <span class="n">TimeSpan</span><span class="p">.</span><span class="n">FromMinutes</span><span class="p">(</span><span class="m">3</span><span class="p">);</span>
-                    <span class="n">options</span><span class="p">.</span><span class="n">SlidingExpiration</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
-                <span class="p">});</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-c#" data-lang="c#"><span class="line"><span class="cl">            <span class="n">services</span><span class="p">.</span><span class="n">AddAuthentication</span><span class="p">(</span><span class="n">CookieAuthenticationDefaults</span><span class="p">.</span><span class="n">AuthenticationScheme</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="p">.</span><span class="n">AddCookie</span><span class="p">(</span><span class="n">options</span> <span class="p">=&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">options</span><span class="p">.</span><span class="n">ExpireTimeSpan</span> <span class="p">=</span> <span class="n">TimeSpan</span><span class="p">.</span><span class="n">FromMinutes</span><span class="p">(</span><span class="m">3</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">options</span><span class="p">.</span><span class="n">SlidingExpiration</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">});</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>这时必须开启<code>SlidingExpiration</code>否则就算活动状态3分钟后也强制退出了。</p>
 <p>如果想要在“记住我”状态下也不要自动刷新cookie到期时间，就要使用上面提到的<code>AllowRefresh</code>了。</p>
@@ -395,7 +393,7 @@
   <span class="copyright-year">
     &copy; 
     2017 - 
-    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>Mai</span>
+    2022<span class="heart"><i class="iconfont icon-heart"></i></span><span>Mai</span>
   </span>
 </div>
 
@@ -412,7 +410,7 @@
 
 
 
-<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+<script type="text/javascript" src="/js/main.min.64437849d125a2d603b3e71d6de5225d641a32d17168a58106e0b61852079683.js"></script>
 
 
 

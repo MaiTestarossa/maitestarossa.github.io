@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.85.0 with theme even" />
+<meta name="generator" content="Hugo 0.96.0 with theme even" />
 
 
 <link rel="canonical" href="https://maitestarossa.github.io/post/serilog-custom-output/" />
@@ -187,13 +187,13 @@
 <p>给日志添加额外信息，如记录接收时的时间，示例代码如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="kt">var</span> <span class="n">evt</span> <span class="p">=</span> <span class="n">LogEventReader</span><span class="p">.</span><span class="n">ReadFromString</span><span class="p">(</span><span class="n">message</span><span class="p">);</span>
-<span class="n">evt</span><span class="p">.</span><span class="n">AddPropertyIfAbsent</span><span class="p">(</span><span class="k">new</span> <span class="n">LogEventProperty</span><span class="p">(</span><span class="s">&#34;Date&#34;</span><span class="p">,</span> <span class="k">new</span> <span class="n">ScalarValue</span><span class="p">(</span><span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">)));</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-C#" data-lang="C#"><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">evt</span> <span class="p">=</span> <span class="n">LogEventReader</span><span class="p">.</span><span class="n">ReadFromString</span><span class="p">(</span><span class="n">message</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">evt</span><span class="p">.</span><span class="n">AddPropertyIfAbsent</span><span class="p">(</span><span class="k">new</span> <span class="n">LogEventProperty</span><span class="p">(</span><span class="s">&#34;Date&#34;</span><span class="p">,</span> <span class="k">new</span> <span class="n">ScalarValue</span><span class="p">(</span><span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">)));</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>添加的时候需要添加<code>ScalarValue</code>，因为Serilog的Property只有4种基础类型，<code>ScalarValue</code> <code>SqeuenceValue</code> <code>DictionaryValue</code> <code>StructValue</code> ，需要转换成对应类型，关于基础类型的解释，可以参考其他文章，这里暂不讨论，待更新。</p>
 <h1 id="按规则保存日志">按规则保存日志</h1>
@@ -201,7 +201,7 @@
 <p>首先按日志类型过滤后保存，可以用如下代码：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -214,39 +214,39 @@
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="k">new</span> <span class="n">LoggerConfiguration</span>
-       <span class="c1">// WARNING ERROR FATAL
-</span><span class="c1"></span>        <span class="p">.</span><span class="n">WriteTo</span><span class="p">.</span><span class="n">Logger</span><span class="p">(</span><span class="n">lc</span> <span class="p">=&gt;</span> <span class="n">lc</span>
-          <span class="p">.</span><span class="n">Filter</span><span class="p">.</span><span class="n">ByIncludingOnly</span><span class="p">(</span><span class="n">le</span> <span class="p">=&gt;</span>
-             <span class="n">le</span><span class="p">.</span><span class="n">Level</span> <span class="k">is</span> <span class="n">LogEventLevel</span><span class="p">.</span><span class="n">Warning</span> <span class="n">or</span> <span class="n">LogEventLevel</span><span class="p">.</span><span class="n">Error</span> <span class="n">or</span> <span class="n">LogEventLevel</span><span class="p">.</span><span class="n">Fatal</span><span class="p">)</span>
-          <span class="p">.</span><span class="n">WriteTo</span><span class="p">.</span><span class="n">Console</span><span class="p">()</span>
-       <span class="c1">// Info
-</span><span class="c1"></span>        <span class="p">.</span><span class="n">WriteTo</span><span class="p">.</span><span class="n">Logger</span><span class="p">(</span><span class="n">lc</span> <span class="p">=&gt;</span> <span class="n">lc</span>
-          <span class="p">.</span><span class="n">Filter</span><span class="p">.</span><span class="n">ByIncludingOnly</span><span class="p">(</span><span class="n">le</span> <span class="p">=&gt;</span>
-             <span class="n">le</span><span class="p">.</span><span class="n">Level</span> <span class="k">is</span> <span class="n">LogEventLevel</span><span class="p">.</span><span class="n">Information</span><span class="p">)</span>
-          <span class="p">.</span><span class="n">WriteTo</span><span class="p">.</span><span class="n">Console</span><span class="p">()</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-C#" data-lang="C#"><span class="line"><span class="cl"><span class="k">new</span> <span class="n">LoggerConfiguration</span>
+</span></span><span class="line"><span class="cl">       <span class="c1">// WARNING ERROR FATAL</span>
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="n">WriteTo</span><span class="p">.</span><span class="n">Logger</span><span class="p">(</span><span class="n">lc</span> <span class="p">=&gt;</span> <span class="n">lc</span>
+</span></span><span class="line"><span class="cl">          <span class="p">.</span><span class="n">Filter</span><span class="p">.</span><span class="n">ByIncludingOnly</span><span class="p">(</span><span class="n">le</span> <span class="p">=&gt;</span>
+</span></span><span class="line"><span class="cl">             <span class="n">le</span><span class="p">.</span><span class="n">Level</span> <span class="k">is</span> <span class="n">LogEventLevel</span><span class="p">.</span><span class="n">Warning</span> <span class="n">or</span> <span class="n">LogEventLevel</span><span class="p">.</span><span class="n">Error</span> <span class="n">or</span> <span class="n">LogEventLevel</span><span class="p">.</span><span class="n">Fatal</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">          <span class="p">.</span><span class="n">WriteTo</span><span class="p">.</span><span class="n">Console</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">       <span class="c1">// Info</span>
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="n">WriteTo</span><span class="p">.</span><span class="n">Logger</span><span class="p">(</span><span class="n">lc</span> <span class="p">=&gt;</span> <span class="n">lc</span>
+</span></span><span class="line"><span class="cl">          <span class="p">.</span><span class="n">Filter</span><span class="p">.</span><span class="n">ByIncludingOnly</span><span class="p">(</span><span class="n">le</span> <span class="p">=&gt;</span>
+</span></span><span class="line"><span class="cl">             <span class="n">le</span><span class="p">.</span><span class="n">Level</span> <span class="k">is</span> <span class="n">LogEventLevel</span><span class="p">.</span><span class="n">Information</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">          <span class="p">.</span><span class="n">WriteTo</span><span class="p">.</span><span class="n">Console</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>还有其他可以指定日志等级的有<code>restrictedToMinimumLevel</code>和<code>levelSwitch</code>，但这2个都是指定最低等级，比如是Information的话就会记录Info、Warn、Error、Fatal，不如<code>.Filter.ByIncludingOnly</code>灵活。</p>
 <h3 id="按日志内包含的properties">按日志内包含的Properties</h3>
 <p>按日志中的Properties规则保存，则需要用到<code>Serilog.Sinks.Map</code>，但Map一般只适合单个Propertity，多个的话会很难看，且不知道能不能以asppsetting.json的config形式配置。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-C#" data-lang="C#">	<span class="p">.</span><span class="n">WriteTo</span><span class="p">.</span><span class="n">Map</span><span class="p">(</span><span class="s">&#34;ClientName&#34;</span><span class="p">,</span> <span class="s">&#34;defaultClientName&#34;</span><span class="p">,</span>
-    <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">wt</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="n">wt</span><span class="p">.</span><span class="n">File</span><span class="p">(</span><span class="s">$&#34;/logs/Info/{name}-.txt&#34;</span><span class="p">,</span><span class="n">outputTemplate</span><span class="p">:</span> <span class="n">outTemplate</span><span class="p">,</span> <span class="n">rollingInterval</span><span class="p">:</span> <span class="n">RollingInterval</span><span class="p">.</span><span class="n">Day</span><span class="p">,</span>
-        <span class="n">fileSizeLimitBytes</span><span class="p">:</span> <span class="m">1024</span> <span class="p">*</span> <span class="m">1024</span> <span class="p">*</span> <span class="m">10</span><span class="p">)))</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-C#" data-lang="C#"><span class="line"><span class="cl">	<span class="p">.</span><span class="n">WriteTo</span><span class="p">.</span><span class="n">Map</span><span class="p">(</span><span class="s">&#34;ClientName&#34;</span><span class="p">,</span> <span class="s">&#34;defaultClientName&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">wt</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="n">wt</span><span class="p">.</span><span class="n">File</span><span class="p">(</span><span class="s">$&#34;/logs/Info/{name}-.txt&#34;</span><span class="p">,</span><span class="n">outputTemplate</span><span class="p">:</span> <span class="n">outTemplate</span><span class="p">,</span> <span class="n">rollingInterval</span><span class="p">:</span> <span class="n">RollingInterval</span><span class="p">.</span><span class="n">Day</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">fileSizeLimitBytes</span><span class="p">:</span> <span class="m">1024</span> <span class="p">*</span> <span class="m">1024</span> <span class="p">*</span> <span class="m">10</span><span class="p">)))</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>上面这段结合按日志类型过滤后，就能以日志中的ClientName为文件名记录滚动日志，文件名后缀会带上日期到天，且超过10MByte就新建日志。</p>
 <p>读取多个属性，我参考了Map内的源码后直接处理<code>LogEvent</code>，获取Properties的代码直接复制了Map的实现，这样实现了日志文件名既带LogLevel又带自己配置的ClientName。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -256,15 +256,15 @@
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-C#" data-lang="C#">    <span class="p">.</span><span class="n">WriteTo</span><span class="p">.</span><span class="n">Map</span><span class="p">(</span><span class="n">evt</span> <span class="p">=&gt;</span> <span class="p">(</span><span class="n">evt</span><span class="p">.</span><span class="n">Level</span><span class="p">,</span> <span class="n">evt</span><span class="p">.</span><span class="n">Properties</span><span class="p">.</span><span class="n">TryGetValue</span><span class="p">(</span><span class="n">SiteName</span><span class="p">,</span> <span class="k">out</span> <span class="kt">var</span> <span class="n">eventPropertyValue</span><span class="p">)</span> <span class="p">&amp;&amp;</span> <span class="n">eventPropertyValue</span> <span class="k">is</span> <span class="n">ScalarValue</span> <span class="n">scalarValue</span> <span class="p">?</span> <span class="n">scalarValue</span><span class="p">.</span><span class="n">Value</span><span class="p">?.</span><span class="n">ToString</span><span class="p">()</span> <span class="p">??</span> <span class="n">defaultSiteName</span> <span class="p">:</span> <span class="n">defaultSiteName</span><span class="p">),</span>
-        <span class="p">(</span><span class="n">tuple</span><span class="p">,</span> <span class="n">wt</span><span class="p">)</span> <span class="p">=&gt;</span>
-        <span class="p">{</span>
-            <span class="n">wt</span><span class="p">.</span><span class="n">File</span><span class="p">(</span>
-                <span class="s">$&#34;/logs/Error/{tuple.Item2}-{tuple.Level}-.txt&#34;</span><span class="p">,</span><span class="n">outputTemplate</span><span class="p">:</span> <span class="n">outTemplate</span><span class="p">,</span>
-                <span class="n">rollingInterval</span><span class="p">:</span> <span class="n">RollingInterval</span><span class="p">.</span><span class="n">Day</span><span class="p">,</span>
-                <span class="n">fileSizeLimitBytes</span><span class="p">:</span> <span class="m">1024</span> <span class="p">*</span> <span class="m">1024</span> <span class="p">*</span> <span class="m">10</span><span class="p">);</span>
-        <span class="p">}))</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-C#" data-lang="C#"><span class="line"><span class="cl">    <span class="p">.</span><span class="n">WriteTo</span><span class="p">.</span><span class="n">Map</span><span class="p">(</span><span class="n">evt</span> <span class="p">=&gt;</span> <span class="p">(</span><span class="n">evt</span><span class="p">.</span><span class="n">Level</span><span class="p">,</span> <span class="n">evt</span><span class="p">.</span><span class="n">Properties</span><span class="p">.</span><span class="n">TryGetValue</span><span class="p">(</span><span class="n">SiteName</span><span class="p">,</span> <span class="k">out</span> <span class="kt">var</span> <span class="n">eventPropertyValue</span><span class="p">)</span> <span class="p">&amp;&amp;</span> <span class="n">eventPropertyValue</span> <span class="k">is</span> <span class="n">ScalarValue</span> <span class="n">scalarValue</span> <span class="p">?</span> <span class="n">scalarValue</span><span class="p">.</span><span class="n">Value</span><span class="p">?.</span><span class="n">ToString</span><span class="p">()</span> <span class="p">??</span> <span class="n">defaultSiteName</span> <span class="p">:</span> <span class="n">defaultSiteName</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="n">tuple</span><span class="p">,</span> <span class="n">wt</span><span class="p">)</span> <span class="p">=&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">wt</span><span class="p">.</span><span class="n">File</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">                <span class="s">$&#34;/logs/Error/{tuple.Item2}-{tuple.Level}-.txt&#34;</span><span class="p">,</span><span class="n">outputTemplate</span><span class="p">:</span> <span class="n">outTemplate</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">rollingInterval</span><span class="p">:</span> <span class="n">RollingInterval</span><span class="p">.</span><span class="n">Day</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">fileSizeLimitBytes</span><span class="p">:</span> <span class="m">1024</span> <span class="p">*</span> <span class="m">1024</span> <span class="p">*</span> <span class="m">10</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}))</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Map使用限制还是很大，如果想要传入多个参数，似乎不能直接传<code>LogEvent</code>到输出模板，实验多次后发现会无法写入日志，必须像上面那样包装成Tuple形式。</p>
 <p>总结这样写其实还是很麻烦，如果规则变多，代码会变得很长。但各种组件适配灵活，自己从源码实现功能方便，这是Serilog的优势。</p>
@@ -349,7 +349,7 @@
   <span class="copyright-year">
     &copy; 
     2017 - 
-    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>Mai</span>
+    2022<span class="heart"><i class="iconfont icon-heart"></i></span><span>Mai</span>
   </span>
 </div>
 
@@ -366,7 +366,7 @@
 
 
 
-<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+<script type="text/javascript" src="/js/main.min.64437849d125a2d603b3e71d6de5225d641a32d17168a58106e0b61852079683.js"></script>
 
 
 

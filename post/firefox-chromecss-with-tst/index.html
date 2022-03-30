@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.85.0 with theme even" />
+<meta name="generator" content="Hugo 0.96.0 with theme even" />
 
 
 <link rel="canonical" href="https://maitestarossa.github.io/post/firefox-chromecss-with-tst/" />
@@ -184,7 +184,7 @@
 <p>附上自己用的式样，主要目的是追求最大效率利用树状栏，紧凑效果。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -227,54 +227,54 @@
 </span><span class="lnt">41
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-css" data-lang="css">
-<span class="c">/* 新建的未读标签红色表示 */</span>
-<span class="nt">tab-item</span><span class="p">.</span><span class="nc">unread</span> <span class="p">.</span><span class="nc">label-content</span> <span class="p">{</span>
-  <span class="k">color</span><span class="p">:</span> <span class="mh">#D00000</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="c">/* 挂起标签变暗，Tab Unloader for Tree Style Tab默认值是0.75，我用更暗的0，6 */</span>
-<span class="p">.</span><span class="nc">tab</span><span class="p">.</span><span class="nc">discarded</span> <span class="p">{</span>
-  <span class="k">opacity</span><span class="p">:</span> <span class="mf">0.75</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="c">/* 挂起标签文字颜色，必须设置，否则会变成未读标签的式样 */</span>
-<span class="p">.</span><span class="nc">tab</span><span class="p">.</span><span class="nc">discarded</span> <span class="p">.</span><span class="nc">label-content</span> <span class="p">{</span>
-  <span class="k">color</span><span class="p">:</span> <span class="mh">#FFFFFF</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="c">/* 标签关闭按钮只有在鼠标悬停时显示 */</span>
-<span class="p">.</span><span class="nc">tab</span><span class="p">:</span><span class="nd">not</span><span class="o">(</span><span class="p">:</span><span class="nd">hover</span><span class="o">)</span> <span class="p">.</span><span class="nc">closebox</span><span class="p">{</span>
-	<span class="k">display</span><span class="p">:</span><span class="kc">none</span>
-<span class="p">}</span>
-
-<span class="c">/* 用favicon图标代替箭头，展开和折叠书签树，有效节约宽度 */</span>
-<span class="nt">tab-item</span> <span class="nt">tab-twisty</span> <span class="p">{</span>
-  <span class="k">margin-right</span><span class="p">:</span> <span class="mi">-1</span><span class="kt">em</span><span class="p">;</span>
-  <span class="k">opacity</span><span class="p">:</span> <span class="mi">0</span> <span class="cp">!important</span><span class="p">;</span>
-  <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span><span class="p">;</span>
-  <span class="k">z-index</span><span class="p">:</span> <span class="mi">10000</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="c">/* 左右宽度更紧凑的调整 */</span>
-<span class="nt">tab-item-substance</span> <span class="p">{</span>
-  <span class="k">border</span><span class="p">:</span> <span class="kc">solid</span> <span class="mi">0</span><span class="kt">px</span> <span class="mh">#000000</span><span class="mi">12</span><span class="p">;</span> 
-<span class="p">}</span>
-<span class="nt">tab-item</span><span class="p">:</span><span class="nd">not</span><span class="o">(</span><span class="p">.</span><span class="nc">pinned</span><span class="o">)</span> <span class="nt">tab-item-substance</span> <span class="p">{</span>
-  <span class="k">padding-left</span><span class="p">:</span> <span class="mi">0</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;</span> <span class="c">/* !important is required when there are enough tabs to cause a scrollbar */</span>
-<span class="p">}</span>
-
-<span class="c">/* 标签高度，25px比较紧凑 */</span>
-<span class="nt">tab-item</span> <span class="p">{</span>
-  <span class="nv">--tab-size</span><span class="p">:</span> <span class="mi">25</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;</span>
-  <span class="k">height</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">tab</span><span class="o">-</span><span class="n">size</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">/* 新建的未读标签红色表示 */</span>
+</span></span><span class="line"><span class="cl"><span class="nt">tab-item</span><span class="p">.</span><span class="nc">unread</span> <span class="p">.</span><span class="nc">label-content</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">color</span><span class="p">:</span> <span class="mh">#D00000</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">/* 挂起标签变暗，Tab Unloader for Tree Style Tab默认值是0.75，我用更暗的0，6 */</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">tab</span><span class="p">.</span><span class="nc">discarded</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">opacity</span><span class="p">:</span> <span class="mf">0.75</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c">/* 挂起标签文字颜色，必须设置，否则会变成未读标签的式样 */</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">tab</span><span class="p">.</span><span class="nc">discarded</span> <span class="p">.</span><span class="nc">label-content</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">color</span><span class="p">:</span> <span class="mh">#FFFFFF</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">/* 标签关闭按钮只有在鼠标悬停时显示 */</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">tab</span><span class="p">:</span><span class="nd">not</span><span class="o">(</span><span class="p">:</span><span class="nd">hover</span><span class="o">)</span> <span class="p">.</span><span class="nc">closebox</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">display</span><span class="p">:</span><span class="kc">none</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">/* 用favicon图标代替箭头，展开和折叠书签树，有效节约宽度 */</span>
+</span></span><span class="line"><span class="cl"><span class="nt">tab-item</span> <span class="nt">tab-twisty</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">margin-right</span><span class="p">:</span> <span class="mi">-1</span><span class="kt">em</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">opacity</span><span class="p">:</span> <span class="mi">0</span> <span class="cp">!important</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">z-index</span><span class="p">:</span> <span class="mi">10000</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">/* 左右宽度更紧凑的调整 */</span>
+</span></span><span class="line"><span class="cl"><span class="nt">tab-item-substance</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">border</span><span class="p">:</span> <span class="kc">solid</span> <span class="mi">0</span><span class="kt">px</span> <span class="mh">#000000</span><span class="mi">12</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nt">tab-item</span><span class="p">:</span><span class="nd">not</span><span class="o">(</span><span class="p">.</span><span class="nc">pinned</span><span class="o">)</span> <span class="nt">tab-item-substance</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">padding-left</span><span class="p">:</span> <span class="mi">0</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;</span> <span class="c">/* !important is required when there are enough tabs to cause a scrollbar */</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">/* 标签高度，25px比较紧凑 */</span>
+</span></span><span class="line"><span class="cl"><span class="nt">tab-item</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">--tab-size</span><span class="p">:</span> <span class="mi">25</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">height</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">tab</span><span class="o">-</span><span class="n">size</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="userchromecss-firefox外观定制">userChrome.css Firefox外观定制</h1>
 <p>该文件主要用于修改Firefox外观，在配置文件夹内新建<code>chrome/userChrome.css</code>文件，并在<code>about:config</code>中查找userprof后找到相关字段设置为<code>true</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -299,30 +299,30 @@
 </span><span class="lnt">23
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-css" data-lang="css"><span class="c">/* 隐藏侧边栏的Tree Style Tab标题栏，只有切换到TST标签才会隐藏 */</span>
-<span class="p">#</span><span class="nn">sidebar-box</span><span class="o">[</span><span class="nt">sidebarcommand</span><span class="o">=</span><span class="s2">&#34;treestyletab_piro_sakura_ne_jp-sidebar-action&#34;</span><span class="o">]</span> <span class="p">#</span><span class="nn">sidebar-header</span> <span class="p">{</span>
-  <span class="k">display</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="c">/* 隐藏收藏夹书签文字，只显示favicon，当鼠标悬停时展开该书签文字 
-</span><span class="c">#personal-bookmarks .bookmark-item &gt; .toolbarbutton-text { display:none !important; }
-</span><span class="c">#personal-bookmarks .bookmark-item:hover &gt; .toolbarbutton-text { display:block !important; }*/</span>
-
-<span class="c">/* 隐藏收藏夹书签文字 更紧凑的风格，以适合放在地址栏左侧 */</span>
-<span class="p">#</span><span class="nn">personal-bookmarks</span> <span class="p">.</span><span class="nc">toolbarbutton-text</span> <span class="p">{</span> <span class="k">display</span><span class="p">:</span> <span class="kc">none</span> <span class="cp">!important</span><span class="p">;</span> <span class="k">margin-top</span><span class="p">:</span> <span class="mi">-1</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
-<span class="p">.</span><span class="nc">toolbarbutton-icon</span> <span class="p">{</span> <span class="n">margin-inline-start</span><span class="p">:</span> <span class="mi">-3</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;</span> <span class="n">margin-inline-end</span><span class="p">:</span> <span class="mi">-3</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
-
-
-<span class="c">/* 隐藏顶部标签页，极细化顶部栏，并缩小关闭放大缩小按钮到右上角 */</span>
-<span class="p">#</span><span class="nn">titlebar</span> <span class="p">{</span><span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">-20</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;}</span>
-<span class="p">#</span><span class="nn">tabbrowser-tabs</span> <span class="p">{</span><span class="k">visibility</span><span class="p">:</span> <span class="kc">collapse</span> <span class="cp">!important</span><span class="p">;}</span>
-<span class="p">#</span><span class="nn">nav-bar</span> <span class="p">{</span><span class="k">margin-right</span><span class="p">:</span> <span class="mi">0</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;}</span>
-<span class="p">#</span><span class="nn">TabsToolbar</span> <span class="p">{</span>
-  <span class="k">height</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;</span>
-  <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">15</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;</span>
-  <span class="k">margin-top</span><span class="p">:</span> <span class="mi">-5</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="c">/* 隐藏侧边栏的Tree Style Tab标题栏，只有切换到TST标签才会隐藏 */</span>
+</span></span><span class="line"><span class="cl"><span class="p">#</span><span class="nn">sidebar-box</span><span class="o">[</span><span class="nt">sidebarcommand</span><span class="o">=</span><span class="s2">&#34;treestyletab_piro_sakura_ne_jp-sidebar-action&#34;</span><span class="o">]</span> <span class="p">#</span><span class="nn">sidebar-header</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">display</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">/* 隐藏收藏夹书签文字，只显示favicon，当鼠标悬停时展开该书签文字 
+</span></span></span><span class="line"><span class="cl"><span class="c">#personal-bookmarks .bookmark-item &gt; .toolbarbutton-text { display:none !important; }
+</span></span></span><span class="line"><span class="cl"><span class="c">#personal-bookmarks .bookmark-item:hover &gt; .toolbarbutton-text { display:block !important; }*/</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">/* 隐藏收藏夹书签文字 更紧凑的风格，以适合放在地址栏左侧 */</span>
+</span></span><span class="line"><span class="cl"><span class="p">#</span><span class="nn">personal-bookmarks</span> <span class="p">.</span><span class="nc">toolbarbutton-text</span> <span class="p">{</span> <span class="k">display</span><span class="p">:</span> <span class="kc">none</span> <span class="cp">!important</span><span class="p">;</span> <span class="k">margin-top</span><span class="p">:</span> <span class="mi">-1</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">toolbarbutton-icon</span> <span class="p">{</span> <span class="n">margin-inline-start</span><span class="p">:</span> <span class="mi">-3</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;</span> <span class="n">margin-inline-end</span><span class="p">:</span> <span class="mi">-3</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">/* 隐藏顶部标签页，极细化顶部栏，并缩小关闭放大缩小按钮到右上角 */</span>
+</span></span><span class="line"><span class="cl"><span class="p">#</span><span class="nn">titlebar</span> <span class="p">{</span><span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">-20</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;}</span>
+</span></span><span class="line"><span class="cl"><span class="p">#</span><span class="nn">tabbrowser-tabs</span> <span class="p">{</span><span class="k">visibility</span><span class="p">:</span> <span class="kc">collapse</span> <span class="cp">!important</span><span class="p">;}</span>
+</span></span><span class="line"><span class="cl"><span class="p">#</span><span class="nn">nav-bar</span> <span class="p">{</span><span class="k">margin-right</span><span class="p">:</span> <span class="mi">0</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;}</span>
+</span></span><span class="line"><span class="cl"><span class="p">#</span><span class="nn">TabsToolbar</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">height</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">15</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">margin-top</span><span class="p">:</span> <span class="mi">-5</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div>
     </div>
@@ -404,7 +404,7 @@
   <span class="copyright-year">
     &copy; 
     2017 - 
-    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>Mai</span>
+    2022<span class="heart"><i class="iconfont icon-heart"></i></span><span>Mai</span>
   </span>
 </div>
 
@@ -421,7 +421,7 @@
 
 
 
-<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+<script type="text/javascript" src="/js/main.min.64437849d125a2d603b3e71d6de5225d641a32d17168a58106e0b61852079683.js"></script>
 
 
 

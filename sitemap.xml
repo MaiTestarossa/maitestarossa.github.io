@@ -9,8 +9,57 @@
   </url>
   
   <url>
+    <loc>https://maitestarossa.github.io/post/2022-healthy-life/</loc>
+    <lastmod>2022-05-04T19:09:42+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://maitestarossa.github.io/categories/</loc>
-    <lastmod>2022-03-30T22:34:00+08:00</lastmod>
+    <lastmod>2022-05-04T19:09:42+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/categories/life/</loc>
+    <lastmod>2022-05-04T19:09:42+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/</loc>
+    <lastmod>2022-05-04T19:09:42+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/post/</loc>
+    <lastmod>2022-05-04T19:09:42+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/tags/</loc>
+    <lastmod>2022-05-04T19:09:42+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/tags/%E5%81%A5%E5%BA%B7/</loc>
+    <lastmod>2022-05-04T19:09:42+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/tags/%E7%94%9F%E6%B4%BB/</loc>
+    <lastmod>2022-05-04T19:09:42+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -37,27 +86,6 @@
   </url>
   
   <url>
-    <loc>https://maitestarossa.github.io/</loc>
-    <lastmod>2022-03-30T22:34:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://maitestarossa.github.io/post/</loc>
-    <lastmod>2022-03-30T22:34:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://maitestarossa.github.io/tags/</loc>
-    <lastmod>2022-03-30T22:34:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://maitestarossa.github.io/post/job-interview-tech/</loc>
     <lastmod>2022-03-30T22:34:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -65,21 +93,7 @@
   </url>
   
   <url>
-    <loc>https://maitestarossa.github.io/categories/life/</loc>
-    <lastmod>2021-12-10T15:13:10+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://maitestarossa.github.io/post/refurbish-exp/</loc>
-    <lastmod>2021-12-10T15:13:10+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://maitestarossa.github.io/tags/%E7%94%9F%E6%B4%BB/</loc>
     <lastmod>2021-12-10T15:13:10+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

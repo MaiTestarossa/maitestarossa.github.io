@@ -10,34 +10,76 @@
   
   <url>
     <loc>https://maitestarossa.github.io/categories/</loc>
-    <lastmod>2022-06-12T22:00:18+08:00</lastmod>
+    <lastmod>2022-06-27T17:14:12+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://maitestarossa.github.io/categories/job/</loc>
-    <lastmod>2022-06-12T22:00:18+08:00</lastmod>
+    <loc>https://maitestarossa.github.io/categories/homelab/</loc>
+    <lastmod>2022-06-27T17:14:12+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://maitestarossa.github.io/</loc>
-    <lastmod>2022-06-12T22:00:18+08:00</lastmod>
+    <lastmod>2022-06-27T17:14:12+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://maitestarossa.github.io/post/</loc>
-    <lastmod>2022-06-12T22:00:18+08:00</lastmod>
+    <lastmod>2022-06-27T17:14:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/tags/rdp/</loc>
+    <lastmod>2022-06-27T17:14:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/tags/remotework/</loc>
+    <lastmod>2022-06-27T17:14:12+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://maitestarossa.github.io/tags/</loc>
+    <lastmod>2022-06-27T17:14:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/tags/vpn/</loc>
+    <lastmod>2022-06-27T17:14:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/tags/wireguard/</loc>
+    <lastmod>2022-06-27T17:14:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/post/wireguard-ros/</loc>
+    <lastmod>2022-06-27T17:14:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/categories/job/</loc>
     <lastmod>2022-06-12T22:00:18+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

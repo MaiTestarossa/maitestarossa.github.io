@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Homelab on Mai blog</title>
+    <link>https://maitestarossa.github.io/categories/homelab/</link>
+    <description>Recent content in Homelab on Mai blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 27 Jun 2022 17:14:12 +0800</lastBuildDate><atom:link href="https://maitestarossa.github.io/categories/homelab/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>外出期间利用wireguard连接家庭网络远程工作/摸鱼（待更新）</title>
+      <link>https://maitestarossa.github.io/post/wireguard-ros/</link>
+      <pubDate>Mon, 27 Jun 2022 17:14:12 +0800</pubDate>
+      
+      <guid>https://maitestarossa.github.io/post/wireguard-ros/</guid>
+      <description>前言 入职一家日资企业后，电脑只能用公司的，且有严格版权要求，再加上前面离职的人在系统内遗留下来装了一堆国产软件的系统环境，并且考虑到环境一致</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>国内太卷，研究一下日本的工作 - Mai blog</title>
+  <title>外出期间利用wireguard连接家庭网络远程工作/摸鱼（待更新） - Mai blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Mai" /><meta name="description" content="契机 5月份再次离职后，拿到几个面试，竟然顺利的都拿到offer，在犹豫间，偶然得到一个对日开发的工作。 本来很抵抗外包对日，但意外的是这家是日" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="Mai" /><meta name="description" content="前言 入职一家日资企业后，电脑只能用公司的，且有严格版权要求，再加上前面离职的人在系统内遗留下来装了一堆国产软件的系统环境，并且考虑到环境一致" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.96.0 with theme even" />
 
 
-<link rel="canonical" href="https://maitestarossa.github.io/post/japan-job/" />
+<link rel="canonical" href="https://maitestarossa.github.io/post/wireguard-ros/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -39,20 +39,20 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="国内太卷，研究一下日本的工作" />
-<meta property="og:description" content="契机 5月份再次离职后，拿到几个面试，竟然顺利的都拿到offer，在犹豫间，偶然得到一个对日开发的工作。 本来很抵抗外包对日，但意外的是这家是日" />
+<meta property="og:title" content="外出期间利用wireguard连接家庭网络远程工作/摸鱼（待更新）" />
+<meta property="og:description" content="前言 入职一家日资企业后，电脑只能用公司的，且有严格版权要求，再加上前面离职的人在系统内遗留下来装了一堆国产软件的系统环境，并且考虑到环境一致" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://maitestarossa.github.io/post/japan-job/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2022-06-12T22:00:18+08:00" />
-<meta property="article:modified_time" content="2022-06-12T22:00:18+08:00" />
+<meta property="og:url" content="https://maitestarossa.github.io/post/wireguard-ros/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-06-27T17:14:12+08:00" />
+<meta property="article:modified_time" content="2022-06-27T17:14:12+08:00" />
 
-<meta itemprop="name" content="国内太卷，研究一下日本的工作">
-<meta itemprop="description" content="契机 5月份再次离职后，拿到几个面试，竟然顺利的都拿到offer，在犹豫间，偶然得到一个对日开发的工作。 本来很抵抗外包对日，但意外的是这家是日"><meta itemprop="datePublished" content="2022-06-12T22:00:18+08:00" />
-<meta itemprop="dateModified" content="2022-06-12T22:00:18+08:00" />
-<meta itemprop="wordCount" content="813">
-<meta itemprop="keywords" content="日语,职业," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="国内太卷，研究一下日本的工作"/>
-<meta name="twitter:description" content="契机 5月份再次离职后，拿到几个面试，竟然顺利的都拿到offer，在犹豫间，偶然得到一个对日开发的工作。 本来很抵抗外包对日，但意外的是这家是日"/>
+<meta itemprop="name" content="外出期间利用wireguard连接家庭网络远程工作/摸鱼（待更新）">
+<meta itemprop="description" content="前言 入职一家日资企业后，电脑只能用公司的，且有严格版权要求，再加上前面离职的人在系统内遗留下来装了一堆国产软件的系统环境，并且考虑到环境一致"><meta itemprop="datePublished" content="2022-06-27T17:14:12+08:00" />
+<meta itemprop="dateModified" content="2022-06-27T17:14:12+08:00" />
+<meta itemprop="wordCount" content="409">
+<meta itemprop="keywords" content="wireguard,vpn,remotework,rdp," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="外出期间利用wireguard连接家庭网络远程工作/摸鱼（待更新）"/>
+<meta name="twitter:description" content="前言 入职一家日资企业后，电脑只能用公司的，且有严格版权要求，再加上前面离职的人在系统内遗留下来装了一堆国产软件的系统环境，并且考虑到环境一致"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -129,15 +129,15 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">国内太卷，研究一下日本的工作</h1>
+      <h1 class="post-title">外出期间利用wireguard连接家庭网络远程工作/摸鱼（待更新）</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2022-06-12 </span>
+        <span class="post-time"> 2022-06-27 </span>
         <div class="post-category">
-            <a href="/categories/job/"> JOB </a>
+            <a href="/categories/homelab/"> Homelab </a>
             </div>
-          <span class="more-meta"> 约 813 字 </span>
-          <span class="more-meta"> 预计阅读 2 分钟 </span>
+          <span class="more-meta"> 约 409 字 </span>
+          <span class="more-meta"> 预计阅读 1 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
     </header>
@@ -147,50 +147,24 @@
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#契机">契机</a></li>
-    <li><a href="#赴日的缺点">赴日的缺点</a>
+    <li>
       <ul>
-        <li><a href="#收入相比上海并不高">收入相比上海并不高</a></li>
-        <li><a href="#生活成本非常高存不下钱">生活成本非常高，存不下钱</a></li>
-        <li><a href="#夏天都需要穿西装">夏天都需要穿西装</a></li>
+        <li><a href="#前言">前言</a></li>
+        <li><a href="#连接家里网络">连接家里网络</a></li>
       </ul>
     </li>
-    <li><a href="#优点">优点</a>
-      <ul>
-        <li><a href="#医疗有保证">医疗有保证</a></li>
-        <li><a href="#衣食住虽然成本高但下限也高">衣食住虽然成本高，但下限也高</a></li>
-        <li><a href="#工作压力小很多不会像国内这么卷">工作压力小很多，不会像国内这么卷</a></li>
-      </ul>
-    </li>
-    <li><a href="#感想">感想</a></li>
   </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      <h1 id="契机">契机</h1>
-<p>5月份再次离职后，拿到几个面试，竟然顺利的都拿到offer，在犹豫间，偶然得到一个对日开发的工作。</p>
-<p>本来很抵抗外包对日，但意外的是这家是日企国内分部，也有机会跑去日本工作，再加上离家近的同时薪水也开得非常高，终于下定决心利用自己日语优势开启第二人生了。</p>
-<h1 id="赴日的缺点">赴日的缺点</h1>
-<p>先说缺点</p>
-<h2 id="收入相比上海并不高">收入相比上海并不高</h2>
-<p>做开发看上去普遍经验者只能到400-600万日元，按现在0.05换算成人民币只有20-30万，对比上海的工资毫无优势。日本税也高，到手工资差不多等于这边满额社保扣完后的收入。</p>
-<h2 id="生活成本非常高存不下钱">生活成本非常高，存不下钱</h2>
-<p>租房成本高，水电费高，吃的费用也高，可能一个月光生存就需要1万人民币以上，比起在上海工作，每月能存下的钱实在可怜。</p>
-<h2 id="夏天都需要穿西装">夏天都需要穿西装</h2>
-<p>短袖衬衫都可能没法穿，虽然有对应夏天用的西装，但长袖的穿着感觉还是很苦。</p>
-<p>除非是外企、创业类公司之类，碰到穿西装的工作的概率很大。</p>
-<h1 id="优点">优点</h1>
-<h2 id="医疗有保证">医疗有保证</h2>
-<p>这点非常吸引我这种中年人，毕竟身体走下坡路了。</p>
-<p>总感觉日本人长寿的秘诀就是医疗条件和政策非常好，食物上连蔬菜都没几种，怎么看也不是因为吃的原因长寿。</p>
-<h2 id="衣食住虽然成本高但下限也高">衣食住虽然成本高，但下限也高</h2>
-<p>住的话，木质结构的アパート之类隔音会很差就算了。一般硬装都比较干净靠谱，洗漱台都是和我家买的那种差不多的日式洗漱台+镜柜的风格，不会像国内租个老破小，卫浴脏的吓人的情况。</p>
-<h2 id="工作压力小很多不会像国内这么卷">工作压力小很多，不会像国内这么卷</h2>
-<p>就这半年我国内找中小公司的情况，一个比一个卷，实在心灰了，又是加班又是pua的，一个个从外地赶来拼命工作，连健康都不要的卷王堆满了国内开发企业。</p>
-<p>期间虽然有拿到可能不卷的大企业的offer，但还是日本这种现在政府层面主动出政策降低加班强度的环境靠谱点。毕竟我每次国内企业面试问加班情况，都会被骗，实在不想陪着hr玩了。</p>
-<h1 id="感想">感想</h1>
-<p>研究了半个月，最大感想还是英语比较重要，即使去日本，环境好工资高的企业英语环境的概率更高。这点国内也一样，高端外企都要英语听说读写。可惜自己日语能达到这程度，英语达不到。</p>
+      <h2 id="前言">前言</h2>
+<p>入职一家日资企业后，电脑只能用公司的，且有严格版权要求，再加上前面离职的人在系统内遗留下来装了一堆国产软件的系统环境，并且考虑到环境一致性，打算利用vpn连到家里主力机和开发机利用rdp保持一直的环境。</p>
+<p>好处是在外面打开的浏览器、编辑器回家仍然是一样的状态，可以继续之前没完成的任务。</p>
+<h2 id="连接家里网络">连接家里网络</h2>
+<p>一开始用RouterOSv6内置的l2tp和qnap nas内的l2tp等，qnap内自带的app设置比较无脑，ros上需要配置证书之类操作很多，但肯定比放nas上靠谱。</p>
+<p>后来偶然升级qnap系统发现已经内置wireguard后就试了下，发现意外的配置简单。</p>
+<p>但qnap上过于傻瓜化用起来有点不爽，而且peer和peer之间互相访问做不到，调查后发现linux要用iptable还是ipfoward之类的配置，觉得自己主路由是ros的前提下用qnap做这么多操作实在没必要，于是把ros升级到了v7以便支持wireguard。</p>
 
     </div>
 
@@ -202,7 +176,7 @@
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2022-06-12
+        2022-06-27
         
     </span>
   </p>
@@ -211,17 +185,15 @@
 </div>
 <footer class="post-footer">
       <div class="post-tags">
-          <a href="/tags/%E6%97%A5%E8%AF%AD/">日语</a>
-          <a href="/tags/%E8%81%8C%E4%B8%9A/">职业</a>
+          <a href="/tags/wireguard/">wireguard</a>
+          <a href="/tags/vpn/">vpn</a>
+          <a href="/tags/remotework/">remotework</a>
+          <a href="/tags/rdp/">rdp</a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/wireguard-ros/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">外出期间利用wireguard连接家庭网络远程工作/摸鱼（待更新）</span>
-            <span class="prev-text nav-mobile">上一篇</span>
-          </a>
-        <a class="next" href="/post/health-scapula/">
-            <span class="next-text nav-default">职业病 - 肩胛骨内侧缘疼痛</span>
+        
+        <a class="next" href="/post/japan-job/">
+            <span class="next-text nav-default">国内太卷，研究一下日本的工作</span>
             <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
           </a>

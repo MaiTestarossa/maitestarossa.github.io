@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Mai blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 27 Jun 2022 17:14:12 +0800</lastBuildDate><atom:link href="https://maitestarossa.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 12 Aug 2022 14:27:36 +0800</lastBuildDate><atom:link href="https://maitestarossa.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Anki 学日语笔记</title>
+      <link>https://maitestarossa.github.io/post/anki/</link>
+      <pubDate>Fri, 12 Aug 2022 14:27:36 +0800</pubDate>
+      
+      <guid>https://maitestarossa.github.io/post/anki/</guid>
+      <description>插件</description>
+    </item>
+    
     <item>
       <title>外出期间利用wireguard连接家庭网络远程工作/摸鱼（待更新）</title>
       <link>https://maitestarossa.github.io/post/wireguard-ros/</link>

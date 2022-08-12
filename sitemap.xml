@@ -9,28 +9,63 @@
   </url>
   
   <url>
-    <loc>https://maitestarossa.github.io/categories/</loc>
-    <lastmod>2022-06-27T17:14:12+08:00</lastmod>
+    <loc>https://maitestarossa.github.io/tags/anki/</loc>
+    <lastmod>2022-08-12T14:27:36+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://maitestarossa.github.io/categories/homelab/</loc>
-    <lastmod>2022-06-27T17:14:12+08:00</lastmod>
+    <loc>https://maitestarossa.github.io/post/anki/</loc>
+    <lastmod>2022-08-12T14:27:36+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/categories/</loc>
+    <lastmod>2022-08-12T14:27:36+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/tags/japanese/</loc>
+    <lastmod>2022-08-12T14:27:36+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/categories/language/</loc>
+    <lastmod>2022-08-12T14:27:36+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://maitestarossa.github.io/</loc>
-    <lastmod>2022-06-27T17:14:12+08:00</lastmod>
+    <lastmod>2022-08-12T14:27:36+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://maitestarossa.github.io/post/</loc>
+    <lastmod>2022-08-12T14:27:36+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/tags/</loc>
+    <lastmod>2022-08-12T14:27:36+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/categories/homelab/</loc>
     <lastmod>2022-06-27T17:14:12+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -45,13 +80,6 @@
   
   <url>
     <loc>https://maitestarossa.github.io/tags/remotework/</loc>
-    <lastmod>2022-06-27T17:14:12+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://maitestarossa.github.io/tags/</loc>
     <lastmod>2022-06-27T17:14:12+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

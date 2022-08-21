@@ -49,7 +49,7 @@
 <meta itemprop="name" content="外出期间利用wireguard连接家庭网络远程工作/摸鱼（待更新）">
 <meta itemprop="description" content="前言 入职一家日资企业后，电脑只能用公司的，且有严格版权要求，再加上前面离职的人在系统内遗留下来装了一堆国产软件的系统环境，并且考虑到环境一致"><meta itemprop="datePublished" content="2022-06-27T17:14:12+08:00" />
 <meta itemprop="dateModified" content="2022-06-27T17:14:12+08:00" />
-<meta itemprop="wordCount" content="409">
+<meta itemprop="wordCount" content="763">
 <meta itemprop="keywords" content="wireguard,vpn,remotework,rdp," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="外出期间利用wireguard连接家庭网络远程工作/摸鱼（待更新）"/>
 <meta name="twitter:description" content="前言 入职一家日资企业后，电脑只能用公司的，且有严格版权要求，再加上前面离职的人在系统内遗留下来装了一堆国产软件的系统环境，并且考虑到环境一致"/>
@@ -136,8 +136,8 @@
         <div class="post-category">
             <a href="/categories/homelab/"> Homelab </a>
             </div>
-          <span class="more-meta"> 约 409 字 </span>
-          <span class="more-meta"> 预计阅读 1 分钟 </span>
+          <span class="more-meta"> 约 763 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
     </header>
@@ -151,6 +151,12 @@
       <ul>
         <li><a href="#前言">前言</a></li>
         <li><a href="#连接家里网络">连接家里网络</a></li>
+        <li><a href="#遇到的一些问题">遇到的一些问题</a>
+          <ul>
+            <li><a href="#必须先访问该网段内网才能联通">必须先访问该网段内网才能联通</a></li>
+            <li><a href="#ddns下ip改变的情况">DDNS下ip改变的情况</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -165,6 +171,12 @@
 <p>一开始用RouterOSv6内置的l2tp和qnap nas内的l2tp等，qnap内自带的app设置比较无脑，ros上需要配置证书之类操作很多，但肯定比放nas上靠谱。</p>
 <p>后来偶然升级qnap系统发现已经内置wireguard后就试了下，发现意外的配置简单。</p>
 <p>但qnap上过于傻瓜化用起来有点不爽，而且peer和peer之间互相访问做不到，调查后发现linux要用iptable还是ipfoward之类的配置，觉得自己主路由是ros的前提下用qnap做这么多操作实在没必要，于是把ros升级到了v7以便支持wireguard。</p>
+<h2 id="遇到的一些问题">遇到的一些问题</h2>
+<h3 id="必须先访问该网段内网才能联通">必须先访问该网段内网才能联通</h3>
+<p>现象是开机启动wireguard.exe后，显示已连接，但没有显示握手或有数据，此时其他机器无法访问这台机器，这台机器必须做一些访问该vpn内网网段的操作，如ping其他该网段的节点，初次握手成功后才能访问。</p>
+<p>我试了用QNAP自带的QVPN创建wireguard作为中心节点，windows端的2台机器也是同样现象。</p>
+<h3 id="ddns下ip改变的情况">DDNS下ip改变的情况</h3>
+<p>这个问题应该算常见问题，动态ip改变了，但wireguard只解析第一次动态域名后就一直保存这个ip了，甚至重启电脑也还是老ip，只有重新开wireguard才能解决。linux之类平台wireguard提供了shell脚本解决这个问题，windows上感觉还是放弃思考用tailscale好。可惜tailsacle没ros版。</p>
 
     </div>
 

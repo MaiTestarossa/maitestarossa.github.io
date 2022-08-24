@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>minipc on Mai blog</title>
+    <link>https://maitestarossa.github.io/tags/minipc/</link>
+    <description>Recent content in minipc on Mai blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 21 Aug 2022 12:15:46 +0800</lastBuildDate><atom:link href="https://maitestarossa.github.io/tags/minipc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Homelab计划 2022</title>
+      <link>https://maitestarossa.github.io/post/homelab-2022-plan/</link>
+      <pubDate>Sun, 21 Aug 2022 12:15:46 +0800</pubDate>
+      
+      <guid>https://maitestarossa.github.io/post/homelab-2022-plan/</guid>
+      <description>序 最近研究了一堆小主机和软路由，今年想完成简单升级的目标。 目前环境 DELL R230 噪音太高，噪音改造后还面临待机功耗40w起步的问题，实在浪费电目前又没</description>
+    </item>
+    
+  </channel>
+</rss>

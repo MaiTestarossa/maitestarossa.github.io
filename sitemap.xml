@@ -10,7 +10,56 @@
   
   <url>
     <loc>https://maitestarossa.github.io/categories/</loc>
-    <lastmod>2022-08-21T12:15:46+08:00</lastmod>
+    <lastmod>2022-08-27T10:50:38+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/tags/dell/</loc>
+    <lastmod>2022-08-27T10:50:38+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/post/dell-optiplex-3000-mff-review/</loc>
+    <lastmod>2022-08-27T10:50:38+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/tags/hardware/</loc>
+    <lastmod>2022-08-27T10:50:38+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/</loc>
+    <lastmod>2022-08-27T10:50:38+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/categories/pc/</loc>
+    <lastmod>2022-08-27T10:50:38+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/post/</loc>
+    <lastmod>2022-08-27T10:50:38+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/tags/</loc>
+    <lastmod>2022-08-27T10:50:38+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -37,21 +86,7 @@
   </url>
   
   <url>
-    <loc>https://maitestarossa.github.io/</loc>
-    <lastmod>2022-08-21T12:15:46+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://maitestarossa.github.io/tags/minipc/</loc>
-    <lastmod>2022-08-21T12:15:46+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://maitestarossa.github.io/post/</loc>
     <lastmod>2022-08-21T12:15:46+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -66,13 +101,6 @@
   
   <url>
     <loc>https://maitestarossa.github.io/tags/remotework/</loc>
-    <lastmod>2022-08-21T12:15:46+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://maitestarossa.github.io/tags/</loc>
     <lastmod>2022-08-21T12:15:46+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -345,13 +373,6 @@
   </url>
   
   <url>
-    <loc>https://maitestarossa.github.io/tags/hardware/</loc>
-    <lastmod>2021-07-16T11:41:09+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://maitestarossa.github.io/categories/hardware/</loc>
     <lastmod>2021-07-16T11:41:09+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -459,20 +480,6 @@
   <url>
     <loc>https://maitestarossa.github.io/post/secondary-android/</loc>
     <lastmod>2021-07-06T18:18:26+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://maitestarossa.github.io/tags/dell/</loc>
-    <lastmod>2021-07-06T16:43:56+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://maitestarossa.github.io/categories/pc/</loc>
-    <lastmod>2021-07-06T16:43:56+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

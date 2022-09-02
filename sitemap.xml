@@ -65,6 +65,34 @@
   </url>
   
   <url>
+    <loc>https://maitestarossa.github.io/categories/code/</loc>
+    <lastmod>2022-08-21T12:16:21+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/tags/dotnet/</loc>
+    <lastmod>2022-08-21T12:16:21+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/tags/sideproject/</loc>
+    <lastmod>2022-08-21T12:16:21+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/post/side-project-plan/</loc>
+    <lastmod>2022-08-21T12:16:21+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://maitestarossa.github.io/tags/devenv/</loc>
     <lastmod>2022-08-21T12:15:46+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -269,20 +297,6 @@
   
   <url>
     <loc>https://maitestarossa.github.io/tags/aspnetcore/</loc>
-    <lastmod>2021-08-13T01:49:13+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://maitestarossa.github.io/categories/code/</loc>
-    <lastmod>2021-08-13T01:49:13+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://maitestarossa.github.io/tags/dotnet/</loc>
     <lastmod>2021-08-13T01:49:13+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

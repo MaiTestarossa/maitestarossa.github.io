@@ -6,7 +6,16 @@
     <description>Recent content in CODE on Mai blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 13 Aug 2021 01:49:13 +0800</lastBuildDate><atom:link href="https://maitestarossa.github.io/categories/code/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 Aug 2022 12:16:21 +0800</lastBuildDate><atom:link href="https://maitestarossa.github.io/categories/code/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>写一些业余代码的计划</title>
+      <link>https://maitestarossa.github.io/post/side-project-plan/</link>
+      <pubDate>Sun, 21 Aug 2022 12:16:21 +0800</pubDate>
+      
+      <guid>https://maitestarossa.github.io/post/side-project-plan/</guid>
+      <description>前言 自从换了工作，基本很少写代码了，大部分都是在写文档和指导别人。 为了不让自己手生，保持对代码的爱好，打算写一些业余项目。 写这篇记录一些项目</description>
+    </item>
+    
     <item>
       <title>ASP.NET Core基于cookie的登录超时研究和防止自动刷新过期时间</title>
       <link>https://maitestarossa.github.io/post/aspnetcore-login-expire-time/</link>

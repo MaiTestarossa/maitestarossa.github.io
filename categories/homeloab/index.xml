@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Homeloab on Mai blog</title>
+    <link>https://maitestarossa.github.io/categories/homeloab/</link>
+    <description>Recent content in Homeloab on Mai blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 11 Sep 2022 19:52:16 +0800</lastBuildDate><atom:link href="https://maitestarossa.github.io/categories/homeloab/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>开启wol关机启动的必须设置</title>
+      <link>https://maitestarossa.github.io/post/wol-enable/</link>
+      <pubDate>Sun, 11 Sep 2022 19:52:16 +0800</pubDate>
+      
+      <guid>https://maitestarossa.github.io/post/wol-enable/</guid>
+      <description>太久没配置忘记wol的设置了。 尝试在windows下设备管理器网卡里属性设置wol还有bios里设置好bios，打算试试wol。 结果仅能在w</description>
+    </item>
+    
+  </channel>
+</rss>

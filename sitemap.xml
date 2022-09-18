@@ -10,7 +10,56 @@
   
   <url>
     <loc>https://maitestarossa.github.io/categories/</loc>
-    <lastmod>2022-09-11T19:52:16+08:00</lastmod>
+    <lastmod>2022-09-18T02:00:08-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/tags/ios/</loc>
+    <lastmod>2022-09-18T02:00:08-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/tags/iphone/</loc>
+    <lastmod>2022-09-18T02:00:08-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/post/ip14promax-review/</loc>
+    <lastmod>2022-09-18T02:00:08-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/</loc>
+    <lastmod>2022-09-18T02:00:08-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/post/</loc>
+    <lastmod>2022-09-18T02:00:08-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/tags/</loc>
+    <lastmod>2022-09-18T02:00:08-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/categories/%E6%B6%88%E8%B4%B9%E7%94%B5%E5%AD%90/</loc>
+    <lastmod>2022-09-18T02:00:08-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -30,28 +79,7 @@
   </url>
   
   <url>
-    <loc>https://maitestarossa.github.io/</loc>
-    <lastmod>2022-09-11T19:52:16+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://maitestarossa.github.io/post/</loc>
-    <lastmod>2022-09-11T19:52:16+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://maitestarossa.github.io/tags/remotework/</loc>
-    <lastmod>2022-09-11T19:52:16+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://maitestarossa.github.io/tags/</loc>
     <lastmod>2022-09-11T19:52:16+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

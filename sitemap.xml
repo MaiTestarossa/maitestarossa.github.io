@@ -10,28 +10,56 @@
   
   <url>
     <loc>https://maitestarossa.github.io/categories/</loc>
-    <lastmod>2022-10-01T20:09:23-07:00</lastmod>
+    <lastmod>2022-10-08T16:24:35+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/tags/chair/</loc>
+    <lastmod>2022-10-08T16:24:35+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/tags/health/</loc>
+    <lastmod>2022-10-08T16:24:35+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://maitestarossa.github.io/categories/life/</loc>
-    <lastmod>2022-10-01T20:09:23-07:00</lastmod>
+    <lastmod>2022-10-08T16:24:35+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://maitestarossa.github.io/</loc>
-    <lastmod>2022-10-01T20:09:23-07:00</lastmod>
+    <lastmod>2022-10-08T16:24:35+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://maitestarossa.github.io/post/</loc>
-    <lastmod>2022-10-01T20:09:23-07:00</lastmod>
+    <lastmod>2022-10-08T16:24:35+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/tags/</loc>
+    <lastmod>2022-10-08T16:24:35+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/post/ergo-chair/</loc>
+    <lastmod>2022-10-08T16:24:35+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -45,13 +73,6 @@
   
   <url>
     <loc>https://maitestarossa.github.io/tags/sms/</loc>
-    <lastmod>2022-10-01T20:09:23-07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://maitestarossa.github.io/tags/</loc>
     <lastmod>2022-10-01T20:09:23-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -451,13 +472,6 @@
   
   <url>
     <loc>https://maitestarossa.github.io/categories/hardware/</loc>
-    <lastmod>2021-07-16T11:41:09+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://maitestarossa.github.io/tags/health/</loc>
     <lastmod>2021-07-16T11:41:09+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

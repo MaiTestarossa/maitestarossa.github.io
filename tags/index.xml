@@ -6,7 +6,25 @@
     <description>Recent content in Tags on Mai blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 01 Oct 2022 20:09:23 -0700</lastBuildDate><atom:link href="https://maitestarossa.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 08 Oct 2022 16:24:35 +0800</lastBuildDate><atom:link href="https://maitestarossa.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>chair</title>
+      <link>https://maitestarossa.github.io/tags/chair/</link>
+      <pubDate>Sat, 08 Oct 2022 16:24:35 +0800</pubDate>
+      
+      <guid>https://maitestarossa.github.io/tags/chair/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>health</title>
+      <link>https://maitestarossa.github.io/tags/health/</link>
+      <pubDate>Sat, 08 Oct 2022 16:24:35 +0800</pubDate>
+      
+      <guid>https://maitestarossa.github.io/tags/health/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>sim</title>
       <link>https://maitestarossa.github.io/tags/sim/</link>
@@ -301,15 +319,6 @@
       <pubDate>Tue, 20 Jul 2021 14:54:02 +0800</pubDate>
       
       <guid>https://maitestarossa.github.io/tags/serilog/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>health</title>
-      <link>https://maitestarossa.github.io/tags/health/</link>
-      <pubDate>Fri, 16 Jul 2021 11:41:09 +0800</pubDate>
-      
-      <guid>https://maitestarossa.github.io/tags/health/</guid>
       <description></description>
     </item>
     

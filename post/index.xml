@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Mai blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 14 Nov 2022 21:03:51 +0800</lastBuildDate><atom:link href="https://maitestarossa.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 21 Nov 2022 22:55:46 +0800</lastBuildDate><atom:link href="https://maitestarossa.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Powercenter中使用java代码</title>
+      <link>https://maitestarossa.github.io/post/pwc-java/</link>
+      <pubDate>Mon, 21 Nov 2022 22:55:46 +0800</pubDate>
+      
+      <guid>https://maitestarossa.github.io/post/pwc-java/</guid>
+      <description>要点 Classpath要手动配置，任何第三方库都要jar包配置。编译的时候，客户端要配置本地的jar包，这样只是本地验证编译成功。服务器端也</description>
+    </item>
+    
     <item>
       <title>使用anki背了5个月日语的感受</title>
       <link>https://maitestarossa.github.io/post/jp-anki-learn/</link>

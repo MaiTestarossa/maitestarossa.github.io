@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>etl on Mai blog</title>
+    <link>https://maitestarossa.github.io/tags/etl/</link>
+    <description>Recent content in etl on Mai blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 21 Nov 2022 22:55:46 +0800</lastBuildDate><atom:link href="https://maitestarossa.github.io/tags/etl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Powercenter中使用java代码</title>
+      <link>https://maitestarossa.github.io/post/pwc-java/</link>
+      <pubDate>Mon, 21 Nov 2022 22:55:46 +0800</pubDate>
+      
+      <guid>https://maitestarossa.github.io/post/pwc-java/</guid>
+      <description>要点 Classpath要手动配置，任何第三方库都要jar包配置。编译的时候，客户端要配置本地的jar包，这样只是本地验证编译成功。服务器端也</description>
+    </item>
+    
+  </channel>
+</rss>

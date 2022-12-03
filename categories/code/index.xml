@@ -6,7 +6,16 @@
     <description>Recent content in CODE on Mai blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 21 Aug 2022 12:16:21 +0800</lastBuildDate><atom:link href="https://maitestarossa.github.io/categories/code/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 21 Nov 2022 22:55:46 +0800</lastBuildDate><atom:link href="https://maitestarossa.github.io/categories/code/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Powercenter中使用java代码</title>
+      <link>https://maitestarossa.github.io/post/pwc-java/</link>
+      <pubDate>Mon, 21 Nov 2022 22:55:46 +0800</pubDate>
+      
+      <guid>https://maitestarossa.github.io/post/pwc-java/</guid>
+      <description>要点 Classpath要手动配置，任何第三方库都要jar包配置。编译的时候，客户端要配置本地的jar包，这样只是本地验证编译成功。服务器端也</description>
+    </item>
+    
     <item>
       <title>写一些业余代码的计划</title>
       <link>https://maitestarossa.github.io/post/side-project-plan/</link>

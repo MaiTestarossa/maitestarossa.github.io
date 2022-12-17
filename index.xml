@@ -6,7 +6,7 @@
     <description>Recent content on Mai blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 21 Nov 2022 22:55:46 +0800</lastBuildDate><atom:link href="https://maitestarossa.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 12 Dec 2022 19:21:29 +0800</lastBuildDate><atom:link href="https://maitestarossa.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
       <link>https://maitestarossa.github.io/about/</link>
@@ -14,6 +14,15 @@
       
       <guid>https://maitestarossa.github.io/about/</guid>
       <description>随便记录点折腾的爱好、技术，大部分研究都是纸上谈兵。</description>
+    </item>
+    
+    <item>
+      <title>Windows Server下Powercenter换行符转换CRLF=&gt;LF</title>
+      <link>https://maitestarossa.github.io/post/pwc-crlf/</link>
+      <pubDate>Mon, 12 Dec 2022 19:21:29 +0800</pubDate>
+      
+      <guid>https://maitestarossa.github.io/post/pwc-crlf/</guid>
+      <description>关于pwc文件生成的换行符 pwc在windows环境下，生成的文件默认是crlf换行，linux服务器下是lf换行。 这里就产生了文件不一致的</description>
     </item>
     
     <item>

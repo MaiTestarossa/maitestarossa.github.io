@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>music on Mai blog</title>
+    <link>https://maitestarossa.github.io/tags/music/</link>
+    <description>Recent content in music on Mai blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 14 Jan 2023 21:03:51 +0800</lastBuildDate><atom:link href="https://maitestarossa.github.io/tags/music/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Windows11版Apple Music日区体验</title>
+      <link>https://maitestarossa.github.io/post/apple-music-windows11/</link>
+      <pubDate>Sat, 14 Jan 2023 21:03:51 +0800</pubDate>
+      
+      <guid>https://maitestarossa.github.io/post/apple-music-windows11/</guid>
+      <description>最近苹果出了Windows11专用的apple music 预览版，于是第一时间体验了下 日区安装方法 首先windows11下区域要改成美国，用美国商店下</description>
+    </item>
+    
+  </channel>
+</rss>

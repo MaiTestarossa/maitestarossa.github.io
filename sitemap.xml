@@ -9,8 +9,57 @@
   </url>
   
   <url>
+    <loc>https://maitestarossa.github.io/tags/apple/</loc>
+    <lastmod>2023-01-14T21:03:51+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://maitestarossa.github.io/categories/</loc>
-    <lastmod>2022-12-12T19:21:29+08:00</lastmod>
+    <lastmod>2023-01-14T21:03:51+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/</loc>
+    <lastmod>2023-01-14T21:03:51+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/tags/music/</loc>
+    <lastmod>2023-01-14T21:03:51+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/categories/music/</loc>
+    <lastmod>2023-01-14T21:03:51+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/post/</loc>
+    <lastmod>2023-01-14T21:03:51+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/tags/</loc>
+    <lastmod>2023-01-14T21:03:51+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/post/apple-music-windows11/</loc>
+    <lastmod>2023-01-14T21:03:51+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -37,28 +86,7 @@
   </url>
   
   <url>
-    <loc>https://maitestarossa.github.io/</loc>
-    <lastmod>2022-12-12T19:21:29+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://maitestarossa.github.io/post/</loc>
-    <lastmod>2022-12-12T19:21:29+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://maitestarossa.github.io/tags/powercenter/</loc>
-    <lastmod>2022-12-12T19:21:29+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://maitestarossa.github.io/tags/</loc>
     <lastmod>2022-12-12T19:21:29+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

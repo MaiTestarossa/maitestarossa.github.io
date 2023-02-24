@@ -9,21 +9,63 @@
   </url>
   
   <url>
-    <loc>https://maitestarossa.github.io/tags/apple/</loc>
-    <lastmod>2023-01-14T21:03:51+08:00</lastmod>
+    <loc>https://maitestarossa.github.io/tags/anki/</loc>
+    <lastmod>2023-02-24T15:27:11+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://maitestarossa.github.io/categories/</loc>
-    <lastmod>2023-01-14T21:03:51+08:00</lastmod>
+    <lastmod>2023-02-24T15:27:11+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/tags/japanese/</loc>
+    <lastmod>2023-02-24T15:27:11+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/categories/language/</loc>
+    <lastmod>2023-02-24T15:27:11+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://maitestarossa.github.io/</loc>
+    <lastmod>2023-02-24T15:27:11+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/post/</loc>
+    <lastmod>2023-02-24T15:27:11+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/tags/</loc>
+    <lastmod>2023-02-24T15:27:11+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/post/jp-compound-word/</loc>
+    <lastmod>2023-02-24T15:27:11+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://maitestarossa.github.io/tags/apple/</loc>
     <lastmod>2023-01-14T21:03:51+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -38,20 +80,6 @@
   
   <url>
     <loc>https://maitestarossa.github.io/categories/music/</loc>
-    <lastmod>2023-01-14T21:03:51+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://maitestarossa.github.io/post/</loc>
-    <lastmod>2023-01-14T21:03:51+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://maitestarossa.github.io/tags/</loc>
     <lastmod>2023-01-14T21:03:51+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -102,27 +130,6 @@
   <url>
     <loc>https://maitestarossa.github.io/post/pwc-java/</loc>
     <lastmod>2022-11-21T22:55:46+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://maitestarossa.github.io/tags/anki/</loc>
-    <lastmod>2022-11-14T21:03:51+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://maitestarossa.github.io/tags/japanese/</loc>
-    <lastmod>2022-11-14T21:03:51+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://maitestarossa.github.io/categories/language/</loc>
-    <lastmod>2022-11-14T21:03:51+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
